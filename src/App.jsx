@@ -1,10 +1,11 @@
 import './App.css'
+import { Front } from '../front/front'
 
 function App() {
 
   return (
     <>
-      <h1>New project!</h1>
+      <Front />
     </>
   )
 }

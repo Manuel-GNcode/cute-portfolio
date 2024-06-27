@@ -1,0 +1,40 @@
+#cuteFront {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    background-image: url('/front/public/cuteFront-background.jpg');
+}
+
+.cuteFront-plate {
+    width: 400px;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    text-align: center;
+}
+.cuteFront-plate img {
+    width: 100%;
+    height: 400px;
+}
+.cuteFront-plate span {
+    font-weight: bold;
+    color: #420404;
+    font-size: 4rem;
+    cursor: pointer;
+}
+.cuteFront-plate span:hover {
+    transform: scale(1.1);
+    color: #790808;
+}
+
+.cuteFront-avatar {
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    background-image: url('./public/cuteFront-avatar.png');
+    background-position: center;
+    background-size: cover;
+    bottom: -70px;
+    right: 20%;
+}
