@@ -1,2 +1,2 @@
-# cutte-portfolio
+# cute-portfolio
 New and exciting collaborative project.
