@@ -55,20 +55,50 @@
     background: #ff0000ab;
     position: relative;
     z-index: 4;
-    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cuteHome-slideCtr {
+    width: 800px;
+    position: relative;
+    overflow: hidden;
 }
 .cuteHome-slide {
-    background: darkgrey;
-    width: 600px;
-    margin: 0 auto;
+    width: 200%;
+    height: 200px;
     display: flex;
+    margin-left: -25%;
 }
 .cuteHome-project {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: darkkhaki;
+    display: block;
+    width: 200px;
+    height: 100%;
+    padding: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.cuteHome-project p {
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    text-align: center;
+}
+.cuteHome-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    padding: 20px 0;
+    width: 100px;
+}
+.btn-left {
+    left: 10%;
+}
+.btn-right {
+    right: 10%;
 }
