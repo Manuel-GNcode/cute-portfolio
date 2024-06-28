@@ -3,23 +3,18 @@ import './front.css';
 export const Front = ()=>{
     const hideFront = ()=>{
         const front = document.querySelector('#cuteFront');
-        const mark = document.querySelector('.cuteFront-mark');
         const avatar = document.querySelector('.cuteFront-avatar');
-        front.style.animation = 'hideFront .4s ease-out .5s forwards';
-        mark.style.animation = 'hideMark .4s cubic-bezier(1.000, -0.460, 1.000, 1.015) forwards';
-        avatar.style.animation = 'hideAvatar .4s cubic-bezier(1.000, -0.460, 1.000, 1.015) forwards';
+        const text = document.querySelector('.cuteFront-text');
+        front.style.animation = 'hideFront .5s ease-out .4s forwards';
+        avatar.style.animation = 'hideAvatar .4s ease-out forwards';
+        text.style.opacity = '0';
     }
 
     return (
-        <article id="cuteFront">
-            <section className="cuteFront-mark">
-                <div className='cuteFront-mark-plate'>
-                    <img className='cuteFront-mark-logo' src="" alt="Logo" />
-                </div>
-                <button onClick={hideFront} type='button' className='cuteFront-mark-btn'>START</button>
-            </section>
-
-            <img className='cuteFront-avatar' src="" alt="Avatar" />
+        <article onClick={hideFront} id="cuteFront">
+            <img className='cuteFront-background' src="home/public/cute-background.jpg" alt="background" />
+            <p className="cuteFront-text playwrite-es-deco-letter">Click to Start</p>
+            <img className='cuteFront-avatar' src="home/public/cute-avatar.png" alt="Avatar" />
         </article>
     )
 }
