@@ -1,0 +1,42 @@
+.cuteHome-slideCtr {
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.cuteHome-slide {
+    width: 200%;
+    height: 130px;
+    display: flex;
+    margin-left: -25%;
+}
+.cuteHome-project {
+    display: block;
+    width: 200px;
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cuteHome-project p {
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    text-align: center;
+}
+.cuteHome-btn {
+    position: absolute;
+    top: 16px;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    padding: 10px 0;
+    width: 130px;
+}
+.btn-left {
+    left: 10%;
+}
+.btn-right {
+    right: 10%;
+}

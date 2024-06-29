@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 #root {
-  height: 100dvh;
-  overflow: hidden;
+  height: 100vh;
+  /* overflow: hidden; */
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: #999;
 }
