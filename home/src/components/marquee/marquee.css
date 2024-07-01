@@ -4,7 +4,7 @@
     overflow: hidden;
 }
 .cuteHome-slide {
-    width: 200%;
+    width: calc(25% * var(--projects));
     height: 130px;
     display: flex;
     margin-left: -25%;
@@ -17,6 +17,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+.cuteHome-project:hover {
+    transform: scale(1.1);
 }
 .cuteHome-project p {
     background-color: aquamarine;

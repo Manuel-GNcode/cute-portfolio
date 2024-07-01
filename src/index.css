@@ -3,8 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'dosis';
+  src: url('/public/tipografia/dosis/Dosis-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'playwrite';
+  src: url('/public/tipografia/playwrite/PlaywriteDEGrund-VariableFont_wght.ttf');
+}
+
 #root {
   height: 100vh;
   /* overflow: hidden; */
   font-size: 16px;
+}
+p {
+  font-family: 'dosis', 'playwrite', sans-serif;
 }

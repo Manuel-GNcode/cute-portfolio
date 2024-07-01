@@ -2,15 +2,6 @@
     --rouse: #d797aa;
 }
 
-@font-face {
-    font-family: 'dosis';
-    src: url('/public/tipografia/dosis/Dosis-VariableFont_wght.ttf');
-}
-@font-face {
-    font-family: 'playwrite';
-    src: url('/public/tipografia/playwrite/PlaywriteDEGrund-VariableFont_wght.ttf');
-}
-
 #cuteFront {
     width: 100%;
     height: 100%;
@@ -50,7 +41,6 @@
     color: var(--rouse);
     animation: pulse .8s linear infinite alternate;
     cursor: pointer;
-    font-family: 'dosis', 'playwrite', sans-serif;
     background-color: #ffffff7e;
     border-radius: 20px;
     padding: 0 20px;

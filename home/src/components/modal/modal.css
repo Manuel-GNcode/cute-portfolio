@@ -1,0 +1,20 @@
+.cuteHome-modal {
+    position: absolute;
+    z-index: 8;
+    width: 400px;
+    height: 300px;
+    bottom: 16px;
+    background: aquamarine;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid black;
+}
+.cuteHome-modal-btn {
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    background: #ffffff5d;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem ;
+}

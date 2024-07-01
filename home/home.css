@@ -57,24 +57,3 @@
     justify-content: center;
     align-items: start;
 }
-
-.cuteHome-easter {
-    position:absolute;
-    width: 100px;
-    height: 100px;
-    background-color: darkgoldenrod;
-    cursor: pointer;
-}
-.site-1 {
-    z-index: -1;
-    left: 0%;
-    top: 0%;
-    transform: translate(-50%, -50%);
-}
-.site-2 {
-    transform: translateY(-100%);
-}
-.site-3 {
-    right: 0;
-    bottom: 0;
-}

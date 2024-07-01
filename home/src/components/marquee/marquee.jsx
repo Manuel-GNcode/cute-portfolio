@@ -1,6 +1,20 @@
 import './marquee.css';
+import PropTypes from 'prop-types';
+import { ilustrations } from '../../constants/constants';
+import { useState, useEffect } from 'react';
 
-export const Marquee = () => {
+export const Marquee = ({updateModal}) => {
+    const [localModal, setLocalModal] = useState(null);
+    useEffect(()=>{
+        if (localModal !== null) {
+            updateModal(localModal)
+        }
+
+        const root = document.querySelector(':root');
+        root.style.setProperty('--projects', ilustrations.length);
+
+    }, [localModal, updateModal])
+
     const nextPlate = ()=>{
         const slider = document.querySelector('.cuteHome-slide');
         let firstSection = document.querySelectorAll('.cuteHome-project')[0];
@@ -25,39 +39,30 @@ export const Marquee = () => {
         }, 300);
     }
 
+    const renderIlustrations = ()=>{
+        const ctrIlustrations = ilustrations.map((ilustration)=>{
+            return (
+                <span onClick={()=>setLocalModal({visible:true, id:ilustration.id})} key={ilustration.id} className="cuteHome-project">
+                    <p>{ilustration.name}</p>
+                </span>
+            )
+        })
+        return ctrIlustrations;
+    }
+
     return (
         <>
             <button onClick={prevPlate} className="cuteHome-btn btn-left">Left</button>
             <button onClick={nextPlate} className="cuteHome-btn btn-right">Right</button>
             <div className="cuteHome-slideCtr">
                 <div className="cuteHome-slide">
-                    <span className="cuteHome-project">
-                        <p>plato 8</p>
-                    </span>
-                    <span className="cuteHome-project">
-                        <p>plato 1</p>
-                    </span>
-                    <span className="cuteHome-project">
-                        <p>plato 2</p>
-                    </span>
-                    <span className="cuteHome-project">
-                        <p>plato 3</p>
-                    </span>
-                    <span className="cuteHome-project">
-                        <p>plato 4</p>
-                    </span>
-
-                    <span className="cuteHome-project">
-                        <p>plato 5</p>
-                    </span>
-                    <span className="cuteHome-project">
-                        <p>plato 6</p>
-                    </span>
-                    <span className="cuteHome-project">
-                        <p>plato 7</p>
-                    </span>
+                    {renderIlustrations()}
                 </div>
             </div>
         </>
     )
+}
+
+Marquee.propTypes = {
+    updateModal: PropTypes.func
 }
