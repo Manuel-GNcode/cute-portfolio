@@ -18,11 +18,11 @@ export const Marquee = ({updateModal}) => {
     const nextPlate = ()=>{
         const slider = document.querySelector('.cuteHome-slide');
         let firstSection = document.querySelectorAll('.cuteHome-project')[0];
-        slider.style.marginLeft = '-50%';
+        slider.style.marginLeft = 'calc(100%/var(--visibleProjects) * -2)';
         slider.style.transition = 'margin .3s'
         setTimeout(() => {
             slider.insertAdjacentElement('beforeend', firstSection);
-            slider.style.marginLeft = '-25%';
+            slider.style.marginLeft = 'calc(100%/var(--visibleProjects) * -1)';
             slider.style.transition = 'none'
         }, 300);
     }
@@ -34,15 +34,23 @@ export const Marquee = ({updateModal}) => {
         slider.style.transition = 'margin .3s'
         setTimeout(() => {
             slider.insertAdjacentElement('afterbegin', firstSection);
-            slider.style.marginLeft = '-25%';
+            slider.style.marginLeft = 'calc(100%/var(--visibleProjects) * -1)';
             slider.style.transition = 'none'
         }, 300);
     }
 
     const renderIlustrations = ()=>{
         const ctrIlustrations = ilustrations.map((ilustration)=>{
+            const handleScale = (item)=>{
+                setLocalModal({visible:true, id:ilustration.id});
+                document.querySelectorAll('.cuteHome-project').forEach(project=>{
+                    project.classList.remove('active');
+                })
+                item.target.classList.add('active');
+            }
+
             return (
-                <span onClick={()=>setLocalModal({visible:true, id:ilustration.id})} key={ilustration.id} className="cuteHome-project">
+                <span onClick={handleScale} key={ilustration.id} className="cuteHome-project">
                     <p>{ilustration.name}</p>
                 </span>
             )

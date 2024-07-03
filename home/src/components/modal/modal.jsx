@@ -12,9 +12,16 @@ export const Modal = ({id, updateModal}) => {
 
     }, [localModal, updateModal])
 
+    const handleScale = ()=>{
+        setLocalModal({visible:false, id:null});
+        document.querySelectorAll('.cuteHome-project').forEach(project=>{
+            project.classList.remove('active');
+        })
+    }
+
     return (
         <div className="cuteHome-modal">
-            <button onClick={()=>setLocalModal({visible:false, id:null})} type='button' className='cuteHome-modal-btn'>x</button>
+            <button onClick={handleScale} type='button' className='cuteHome-modal-btn'>x</button>
             <p>{ilustrations[id].name}</p>
         </div>
     );

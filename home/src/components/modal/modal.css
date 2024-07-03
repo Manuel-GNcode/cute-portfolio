@@ -1,12 +1,12 @@
 .cuteHome-modal {
     position: absolute;
-    z-index: 8;
-    width: 400px;
+    z-index: 6;
+    width: 500px;
     height: 300px;
     bottom: 16px;
     background: aquamarine;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
     border: 8px solid black;
 }
 .cuteHome-modal-btn {
