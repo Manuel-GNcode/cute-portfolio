@@ -1,5 +1,5 @@
-import './App.css'
 import { Home } from '../home/home'
+//Aquí irán las rutas
 
 function App() {
 

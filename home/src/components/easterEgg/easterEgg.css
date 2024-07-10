@@ -12,11 +12,13 @@
     transform: translate(-50%, -50%);
 }
 .site-2 {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
+    z-index: -1;
 }
 .site-3 {
     right: 0;
     bottom: 0;
+    transform: translateY(-100%);
 }
 .cuteHome-easterSound {
     display: absolute;

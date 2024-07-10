@@ -1,6 +1,14 @@
 :root {
     --visibleProjects: 3;
 }
+.cuteHome-marquee {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
 .cuteHome-slideCtr {
     width: 800px;
     position: relative;
@@ -13,7 +21,6 @@
     margin-left: calc(100%/var(--visibleProjects) * -1);
 }
 .cuteHome-project {
-    display: block;
     width: calc(100%/var(--visibleProjects));
     height: 100%;
     padding: 16px;
@@ -22,34 +29,58 @@
     justify-content: center;
     cursor: pointer;
     transition: transform .3s ease;
-}
-.cuteHome-project:hover {
-    filter: brightness(120%);
+    position: relative;
 }
 .cuteHome-project p {
-    background-color: aquamarine;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     text-align: center;
     pointer-events: none;
+    z-index: 10;
+}
+.cuteHome-plate {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background-image: url('/home/public/cute-plate.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+.cuteHome-project:hover .cuteHome-plate {
+    filter: drop-shadow(0 2px 5px #a8a2b4);
 }
 .cuteHome-btn {
     position: absolute;
-    top: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     font-size: 2rem;
     z-index: 10;
     padding: 10px 0;
-    width: 130px;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cuteHome-btn:hover {
+    filter:drop-shadow(0 2px 5px #a8a2b4);
 }
 .btn-left {
-    left: 10%;
+    left: -10%;
+    background-image: url('/home/public/cute-arrow.png');
 }
 .btn-right {
-    right: 10%;
+    right: -10%;
+    background-image: url('/home/public/cute-arrow.png');
+    transform: translateY(-50%) scaleX(-1);
 }
 
 .active {
     transform: scale(1.1);
+    filter: drop-shadow(0 5px 5px #a8a2b4);
 }

@@ -1,5 +1,8 @@
 :root {
     --rouse: #d797aa;
+    --wAvatar: 3357px;
+    --hAvatar: 592px;
+    --sAvatar: 1.2;
 }
 
 #cuteFront {
@@ -22,12 +25,21 @@
 .cuteFront-avatar {
     position: absolute;
     z-index: 15;
-    bottom: 0;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
-    height: 720px;
-    filter: brightness(95%);
-    animation: pulse 2s ease-in-out infinite alternate;
+    width: calc(var(--wAvatar) * var(--sAvatar) / 4);
+    overflow: hidden;
+    animation: pulseAvatar 2s linear infinite alternate;
+}
+.cuteFront-avatar img {
+    height: calc(var(--hAvatar) * var(--sAvatar));
+    animation: animationAvatar .5s steps(4) infinite;
+}
+@keyframes animationAvatar {
+    to {
+        margin-left: calc(var(--wAvatar)* -1 * var(--sAvatar));
+    }
 }
 
 .cuteFront-text {
@@ -60,6 +72,11 @@
         transform: translateX(-50%) scale(1.1);
     }
 }
+@keyframes pulseAvatar {
+    to {
+        transform: translateX(-50%) scale(1.05);
+    }
+}
 
 @keyframes hideFront {
     100% {
@@ -68,9 +85,6 @@
 }
 
 @keyframes zoomImg {
-    0% {
-        filter: brightness(100%)  blur(0);
-    }
     100% {
         transform: scale(4);
     }
@@ -78,5 +92,16 @@
 @keyframes hideAvatar {
     100% {
         transform: translateY(100%) translateX(-50%);
+    }
+}
+
+@media screen and (width < 900px) {
+    :root {
+        --sAvatar: 1;
+    }
+}
+@media screen and (height < 500px) {
+    :root {
+        --sAvatar: 1;
     }
 }

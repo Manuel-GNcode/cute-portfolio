@@ -40,18 +40,18 @@ export const Marquee = ({updateModal}) => {
     }
 
     const renderIlustrations = ()=>{
+        const handleScale = (item)=>{
+            setLocalModal({visible:true, id:item.target.id});
+            document.querySelectorAll('.cuteHome-project').forEach(project=>{
+                project.classList.remove('active');
+            })
+            item.target.classList.add('active');
+        }
         const ctrIlustrations = ilustrations.map((ilustration)=>{
-            const handleScale = (item)=>{
-                setLocalModal({visible:true, id:ilustration.id});
-                document.querySelectorAll('.cuteHome-project').forEach(project=>{
-                    project.classList.remove('active');
-                })
-                item.target.classList.add('active');
-            }
-
             return (
-                <span onClick={handleScale} key={ilustration.id} className="cuteHome-project">
+                <span id={ilustration.id} onClick={handleScale} key={ilustration.id} className="cuteHome-project">
                     <p>{ilustration.name}</p>
+                    <span className="cuteHome-plate"></span>
                 </span>
             )
         })
@@ -59,15 +59,15 @@ export const Marquee = ({updateModal}) => {
     }
 
     return (
-        <>
-            <button onClick={prevPlate} className="cuteHome-btn btn-left">Left</button>
-            <button onClick={nextPlate} className="cuteHome-btn btn-right">Right</button>
+        <div className='cuteHome-marquee'>
+            <button onClick={prevPlate} className="cuteHome-btn btn-left"></button>
+            <button onClick={nextPlate} className="cuteHome-btn btn-right"></button>
             <div className="cuteHome-slideCtr">
                 <div className="cuteHome-slide">
                     {renderIlustrations()}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

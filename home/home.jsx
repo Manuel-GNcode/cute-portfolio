@@ -17,17 +17,20 @@ export const Home = ()=>{
                 {randomSite==2 && <EasterEgg sitePosition={randomSite}/> }
                 <span className='cuteHome-fridge'>
                     {randomSite==0 && <EasterEgg sitePosition={randomSite} /> }
-                    Fridge
                 </span>
                 <div className='cuteHome-details'>
                     {randomSite==1 && <EasterEgg sitePosition={randomSite} />}
-                    <span className="cuteHome-kofi">Ko-fi</span>
-                    <span className="cuteHome-table">Table</span>
+                    <div className="cuteHome-furnitures">
+                        <span className="cuteHome-kofi"></span>
+                        <span className="cuteHome-microondas"></span>
+                        <span className="cuteHome-plates"></span>
+                    </div>
+                    <span className="cuteHome-table"></span>
                 </div>
 
                 {showModal.visible && <Modal id={showModal.id} updateModal={setShowModal} />}
 
-                <img className='cuteHome-avatar' src="" alt="Avatar" />
+                <img className='cuteHome-avatar' src="/home/public/cute-avatarHome.png" alt="Avatar" />
             </section>
 
             <section className='cuteHome-bottom'>

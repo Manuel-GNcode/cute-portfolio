@@ -16,9 +16,11 @@ export const Front = ()=>{
 
     return (
         <article ref={cuteFront} onClick={hideFront} id="cuteFront">
-            <img ref={cuteImg} className='cuteFront-background' src="home/public/cute-background.png" alt="background" />
+            <img ref={cuteImg} className='cuteFront-background' src="home/public/cute-background.png" alt="background"/>
             <p ref={cuteText} className="cuteFront-text"><span className='cuteFront-point'></span> Click to Start <span className='cuteFront-point'></span></p>
-            <img ref={cuteAvatar} className='cuteFront-avatar' src="home/public/cute-avatar.png" alt="Avatar" />
+            <div ref={cuteAvatar} className="cuteFront-avatar">
+                <img src="home/public/cute-avatar.png" alt="Avatar" />
+            </div>
         </article>
     )
 }
