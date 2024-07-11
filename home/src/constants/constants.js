@@ -21,7 +21,7 @@ export const ilustrations = [
         name: 'Malteada',
         id: 2,
         url: 'food-malteada.png',
-        description: 'Ai-Hoshino',
+        description: 'Ai Hoshino',
         src: 'Ai-Hoshino.jpg',
         stack: 'ai'
     },

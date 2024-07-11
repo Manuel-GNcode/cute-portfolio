@@ -32,7 +32,7 @@ export const Home = ()=>{
 
                 {showModal.visible && <Modal id={showModal.id} updateModal={setShowModal} />}
 
-                <Description />
+                <Description show={showModal}/>
 
                 <img className='cuteHome-avatar' src="/home/public/cute-avatarHome.png" alt="Avatar" />
             </section>
