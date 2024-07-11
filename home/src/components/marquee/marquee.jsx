@@ -41,7 +41,7 @@ export const Marquee = ({updateModal}) => {
 
     const renderIlustrations = ()=>{
         const handleScale = (item)=>{
-            setLocalModal({visible:true, id:item.target.id});
+            setLocalModal({visible:true, id:item.target.id.slice(-1)});
             document.querySelectorAll('.cuteHome-project').forEach(project=>{
                 project.classList.remove('active');
             })
@@ -49,9 +49,8 @@ export const Marquee = ({updateModal}) => {
         }
         const ctrIlustrations = ilustrations.map((ilustration)=>{
             return (
-                <span id={ilustration.id} onClick={handleScale} key={ilustration.id} className="cuteHome-project">
-                    <p>{ilustration.name}</p>
-                    <span className="cuteHome-plate"></span>
+                <span id={'project-'+ilustration.id} onClick={handleScale} key={ilustration.id} className="cuteHome-project">
+                    <img className={'cuteHome-project-img '} src={'home/public/'+ilustration.url} alt={ilustration.name} />
                 </span>
             )
         })

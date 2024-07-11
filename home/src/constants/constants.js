@@ -2,51 +2,52 @@ export const randomSite = Math.floor(Math.random()*3);
 
 export const ilustrations = [
     {
-        name: 'Ilustration 0',
+        name: 'Jam',
         id: 0,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-jam.png',
+        description: 'My ilustration',
+        src: 'Color-Wheel.jpg'
     },
     {
-        name: 'Ilustration 1',
+        name: 'CatBurger',
         id: 1,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-catBurger.png',
+        description: 'My ilustration',
+        src: 'McMiku.jpg'
     },
     {
-        name: 'Ilustration 2',
+        name: 'Malteada',
         id: 2,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-malteada.png',
+        description: 'My ilustration',
+        src: 'Ai-Hoshino.jpg'
     },
     {
-        name: 'Ilustration 3',
+        name: 'Ice Cream',
         id: 3,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-iceCream.png',
+        description: 'My ilustration',
+        src: 'Sakura-Miku.jpg'
     },
     {
-        name: 'Ilustration 4',
+        name: 'Candy',
         id: 4,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-candy.png',
+        description: 'My ilustration',
+        src: 'Haerin.jpg'
     },
     {
-        name: 'Ilustration 5',
+        name: 'Macarron',
         id: 5,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-macarron.png',
+        description: 'My ilustration',
+        src: 'Miku-Monalisa.jpg'
     },
     {
-        name: 'Ilustration 6',
+        name: 'Juice',
         id: 6,
-        url: 'image.png',
-        description: 'My ilustration'
-    },
-    {
-        name: 'Ilustration 7',
-        id: 7,
-        url: 'image.png',
-        description: 'My ilustration'
+        url: 'food-juice.png',
+        description: 'My ilustration',
+        src: 'Miku-Popipo.jpg'
     },
 ]

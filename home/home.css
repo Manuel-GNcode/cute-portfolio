@@ -1,11 +1,12 @@
+:root {
+    --sDetails: 1;
+}
 #cuteHome {
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 10;
-    background-image: url('/home/public/cute-background2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
 }
 
 .cuteHome-main {
@@ -13,55 +14,58 @@
     width: 100%;
     position: relative;
     z-index: 2;
+    background-image: url('/home/public/cute-background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* agregar media query 100% 100%*/
 }
 .cuteHome-fridge {
-    width: 300px;
-    height: 450px;
+    height: calc(400px * var(--sDetails));
+    width: calc(300px * var(--sDetails));
     position: absolute;
     bottom: 0;
     background-image: url('/home/public/cute-nevera.png');
     background-size: cover;
-    left: 10%;
+    left: calc(var(--sDetails) * 10%);
 }
+
 .cuteHome-details {
     position: absolute;
     bottom: 0;
     right: 0;
     display: flex;
     flex-direction: column;
-    width: 60%;
-    pointer-events: none;
+    width: calc(800px * var(--sDetails));
 }
 .cuteHome-furnitures {
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: calc(var(--sDetails) * 120px);
     justify-content: space-evenly;
     align-items: end;
 }
 .cuteHome-kofi {
-    height: 120px;
-    width: 200px;
+    height: 100%;
+    width: calc(var(--sDetails)*200px);
     background-image: url('/home/public/cute-kofi.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
-    pointer-events: all;
     cursor: pointer;
 }
 .cuteHome-kofi:hover {
     transform: scale(1.1);
 }
 .cuteHome-microondas {
-    height: 100px;
-    width: 200px;
+    height: 80%;
+    width: calc(var(--sDetails)*200px);
     background-image: url('/home/public/cute-microondas.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 .cuteHome-plates {
-    height: 100px;
-    width: 200px;
+    height: 80%;
+    width: calc(var(--sDetails)*200px);
     background-image: url('/home/public/cute-platos.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -71,8 +75,9 @@
     background-image: url('/home/public/cute-mesaback.png');
     background-size:cover;
 }
+
 .cuteHome-avatar {
-    height: 400px;
+    height: calc(400px * var(--sDetails));
     position: absolute;
     bottom: -1%;
     right: 10%;
@@ -87,4 +92,13 @@
     background-size: cover;
     position: relative;
     z-index: 4;
+}
+
+@media screen and ((width < 900px) or (height < 500px)) {
+    :root {
+        --sDetails: .8;
+    }
+    .cuteHome-main {
+        background-size: 100% 100%;
+    }
 }

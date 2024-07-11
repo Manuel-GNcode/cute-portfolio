@@ -21,13 +21,16 @@ export const Modal = ({id, updateModal}) => {
 
     return (
         <div className="cuteHome-modal">
-            <button onClick={handleScale} type='button' className='cuteHome-modal-btn'>x</button>
-            <p>{ilustrations[id].name}</p>
+            <button onClick={handleScale} type='button' className='cuteHome-modal-btn'></button>
+            <img loading='lazy' className='modal-ilustration' src={'home/public/'+ilustrations[id].src} alt={ilustrations[id].name} />
         </div>
     );
 };
 
 Modal.propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     updateModal: PropTypes.func
 }

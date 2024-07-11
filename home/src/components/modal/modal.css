@@ -1,22 +1,36 @@
 .cuteHome-modal {
     position: absolute;
     z-index: 6;
-    width: 700px;
-    height: 400px;
+    width: calc(750px * var(--sDetails));
+    height: calc(400px * var(--sDetails));
     bottom: 32px;
     background: #a8a2b4;
     left: 50%;
     transform: translateX(-60%);
     border: 8px solid #fff;
     border-radius: 60px;
+    padding: 16px;
 }
 .cuteHome-modal-btn {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5px 10px;
-    background: #ffffff;
+    top: -8%;
+    transform: translateX(-50%);
+    height: calc(50px * var(--sDetails));;
+    aspect-ratio: 1/1;
+    background: transparent;
+    background-image: url('/home/public/cute-home-x.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: pointer;
     border: none;
-    font-size: 1.5rem ;
+}
+
+.modal-ilustration {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    cursor:zoom-in;
 }

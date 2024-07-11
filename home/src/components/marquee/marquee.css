@@ -2,54 +2,44 @@
     --visibleProjects: 3;
 }
 .cuteHome-marquee {
-    width: 800px;
+    width: calc(var(--sDetails) * 800px);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin: 0 auto;
+    height: 100%;
 }
 .cuteHome-slideCtr {
-    width: 800px;
+    width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow-x: clip;
+    height: 100%;
 }
 .cuteHome-slide {
     width: calc(100%/var(--visibleProjects) * var(--projects));
-    height: 130px;
+    height: 100%;
     display: flex;
     margin-left: calc(100%/var(--visibleProjects) * -1);
 }
 .cuteHome-project {
     width: calc(100%/var(--visibleProjects));
     height: 100%;
-    padding: 16px;
     display: flex;
-    align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: transform .3s ease;
     position: relative;
 }
-.cuteHome-project p {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    text-align: center;
+.cuteHome-project-img {
+    max-width: 100%;
     pointer-events: none;
-    z-index: 10;
+    transform: translateY(-25%);
+    position: relative;
+    z-index: 50;
 }
-.cuteHome-plate {
-    position: absolute;
-    width: 70%;
-    height: 100%;
-    background-image: url('/home/public/cute-plate.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    pointer-events: none;
-}
-.cuteHome-project:hover .cuteHome-plate {
+
+.cuteHome-project:hover .cuteHome-project-img {
     filter: drop-shadow(0 2px 5px #a8a2b4);
 }
 .cuteHome-btn {

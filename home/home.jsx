@@ -18,6 +18,7 @@ export const Home = ()=>{
                 <span className='cuteHome-fridge'>
                     {randomSite==0 && <EasterEgg sitePosition={randomSite} /> }
                 </span>
+                
                 <div className='cuteHome-details'>
                     {randomSite==1 && <EasterEgg sitePosition={randomSite} />}
                     <div className="cuteHome-furnitures">
