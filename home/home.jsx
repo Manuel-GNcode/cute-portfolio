@@ -4,6 +4,7 @@ import { randomSite } from './src/constants/constants';
 import { EasterEgg } from './src/components/easterEgg/easterEgg';
 import { Modal } from './src/components/modal/modal';
 import { useState } from 'react';
+import { Description } from './src/components/description/description';
 // import { Front } from './src/components/front/front';
 
 export const Home = ()=>{
@@ -30,6 +31,8 @@ export const Home = ()=>{
                 </div>
 
                 {showModal.visible && <Modal id={showModal.id} updateModal={setShowModal} />}
+
+                <Description />
 
                 <img className='cuteHome-avatar' src="/home/public/cute-avatarHome.png" alt="Avatar" />
             </section>
