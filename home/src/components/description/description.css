@@ -9,7 +9,7 @@
     width: 250px;
     height: 70px;
     text-align: center;
-    background-color: #e7e5e5;
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@
     background-position: right;
 }
 .description-between {
-    width: 5px;
+    width: 3px;
     height: 100%;
     background-color: var(--rouse);
     border-radius: 10px;

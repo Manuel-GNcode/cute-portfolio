@@ -14,6 +14,7 @@ export const Home = ()=>{
         <>
         {/* <Front /> */}
         <article id='cuteHome'>
+            <p className='cuteHome-homePage'><span className='homePage-arrow'></span>Home</p>
             <section className='cuteHome-main'>
                 {randomSite==2 && <EasterEgg sitePosition={randomSite}/> }
                 <span className='cuteHome-fridge'>
