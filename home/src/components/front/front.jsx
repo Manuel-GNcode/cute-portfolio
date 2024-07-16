@@ -1,21 +1,41 @@
 import './front.css';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types'
 
-export const Front = ()=>{
+export const Front = ({show, updateShow})=>{
     const cuteAvatar = useRef();
     const cuteText = useRef();
     const cuteFront = useRef();
     const cuteImg = useRef();
 
     const hideFront = ()=>{
-        cuteFront.current.style.animation = 'hideFront 0s ease-out 1.4s forwards';
-        cuteAvatar.current.style.animation = 'hideAvatar .4s ease-in forwards';
         cuteText.current.style.opacity = '0';
-        cuteImg.current.style.animation = 'zoomImg 1s ease-in .2s forwards'
+        cuteAvatar.current.classList.add('hideAvatar');
+        cuteImg.current.classList.add('zoomImg');
+
+        setTimeout(() => {
+            cuteFront.current.classList.add('hideFront');
+        }, 900);
+    }
+    const showFront = () => {
+        cuteFront.current.classList.remove('hideFront');
+        setTimeout(() => {
+            cuteText.current.style.opacity = '1';
+            cuteAvatar.current.classList.remove('hideAvatar');
+            cuteImg.current.classList.remove('zoomImg');
+        }, 100);
     }
 
+    const handleFront = ()=>{
+        updateShow(false);
+    }
+    useEffect(()=>{
+        if (show === false) hideFront();
+        if (show === true) showFront();
+    }, [show])
+
     return (
-        <article ref={cuteFront} onClick={hideFront} id="cuteFront">
+        <article ref={cuteFront} onClick={handleFront} id="cuteFront">
             <img ref={cuteImg} className='cuteFront-background' src="home/public/cute-background.png" alt="background"/>
             <p ref={cuteText} className="cuteFront-text"><span className='cuteFront-point'></span> Click to Start <span className='cuteFront-point'></span></p>
             <div ref={cuteAvatar} className="cuteFront-avatar">
@@ -23,4 +43,9 @@ export const Front = ()=>{
             </div>
         </article>
     )
+}
+
+Front.propTypes = {
+    show: PropTypes.bool,
+    updateShow: PropTypes.func,
 }

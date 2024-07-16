@@ -11,6 +11,9 @@
     z-index: 20;
     overflow: hidden;
 }
+.hideFront {
+    display: none;
+}
 
 .cuteFront-background {
     position: absolute;
@@ -19,6 +22,10 @@
     object-fit: fill;
     z-index: 10;
     filter: brightness(100%) blur(2px);
+    transition: transform .8s ease .2s;
+}
+.zoomImg {
+    transform: scale(4);
 }
 
 .cuteFront-avatar {
@@ -29,7 +36,10 @@
     transform: translateX(-50%);
     width: calc(var(--wAvatar) * var(--sAvatar) / 4);
     overflow: hidden;
-    animation: pulseAvatar 2s linear infinite alternate;
+    transition: transform .4s;
+}
+.hideAvatar {
+    transform: translateY(100%) translateX(-50%);
 }
 .cuteFront-avatar img {
     height: calc(var(--hAvatar) * var(--sAvatar));
@@ -38,6 +48,11 @@
 @keyframes animationAvatar {
     to {
         margin-left: calc(var(--wAvatar)* -1 * var(--sAvatar));
+    }
+}
+@keyframes pulseAvatar {
+    to {
+        transform: translateX(-50%) scale(1.05);
     }
 }
 
@@ -69,28 +84,6 @@
 @keyframes pulse {
     to {
         transform: translateX(-50%) scale(1.1);
-    }
-}
-@keyframes pulseAvatar {
-    to {
-        transform: translateX(-50%) scale(1.05);
-    }
-}
-
-@keyframes hideFront {
-    100% {
-        display: none;
-    }
-}
-
-@keyframes zoomImg {
-    100% {
-        transform: scale(4);
-    }
-}
-@keyframes hideAvatar {
-    100% {
-        transform: translateY(100%) translateX(-50%);
     }
 }
 

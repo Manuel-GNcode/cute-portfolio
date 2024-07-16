@@ -1,5 +1,8 @@
 :root {
     --sDetails: 1;
+    --widthAvatar: 4760px;
+    --heightAvatar: 1348px;
+    --scaleAvatar: 0.32;
 }
 #cuteHome {
     width: 100%;
@@ -8,23 +11,31 @@
     z-index: 10;
     overflow: hidden;
 }
-.cuteHome-homePage {
+.cuteHome-homePage, .cuteHome-contactPage {
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 20;
     background-color: var(--rouse);
     color: #fff;
     padding: 8px 20px;
-    border-bottom: 4px solid #fff;
-    border-right: 4px solid #fff;
-    border-bottom-right-radius: 40px;
     font-weight: bold;
     font-size: 1.5rem;
     display: flex;
     gap: 10px;
     align-items: center;
     cursor: pointer;
+}
+.cuteHome-homePage {
+    left: 0;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-bottom-right-radius: 40px;
+}
+.cuteHome-contactPage {
+    right: 0;
+    border-bottom: 4px solid #fff;
+    border-left: 4px solid #fff;
+    border-bottom-left-radius: 40px;
 }
 .homePage-arrow {
     display: inline-block;
@@ -33,6 +44,9 @@
     width: 0;
     height: 0;
     border-radius: 5px;
+}
+.cuteHome-contactPage .homePage-arrow {
+    transform: scale(-1);
 }
 
 .cuteHome-main {
@@ -102,13 +116,23 @@
     background-size:cover;
 }
 
-.cuteHome-avatar {
-    height: calc(400px * var(--sDetails));
+.cuteHome-avatarCtr {
     position: absolute;
     bottom: -1%;
     right: 10%;
     z-index: 8;
     pointer-events: none;
+    width: calc(var(--widthAvatar)* var(--scaleAvatar) /4);
+    overflow: hidden;
+}
+.cuteHome-avatar {
+    height: calc(var(--heightAvatar)* var(--scaleAvatar));
+    /* animation: avatarIdle 1.5s steps(4) infinite; */
+}
+@keyframes avatarIdle {
+    to {
+        margin-left: calc(var(--widthAvatar) * -1 * var(--scaleAvatar));
+    }
 }
 
 .cuteHome-bottom {
@@ -124,6 +148,7 @@
 @media screen and ((width < 900px) or (height < 500px)) {
     :root {
         --sDetails: .8;
+        --scaleAvatar: 0.25;
     }
     .cuteHome-main {
         background-size: 100% 100%;

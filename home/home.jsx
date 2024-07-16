@@ -5,16 +5,19 @@ import { EasterEgg } from './src/components/easterEgg/easterEgg';
 import { Modal } from './src/components/modal/modal';
 import { useState } from 'react';
 import { Description } from './src/components/description/description';
-// import { Front } from './src/components/front/front';
+import { Front } from './src/components/front/front';
 
 export const Home = ()=>{
     const [showModal, setShowModal] = useState({visible: false, id: null});
+    const [showHome, setShowHome] = useState(null);
+    const handleShowHome = ()=>{setShowHome(true)}
 
     return (
         <>
-        {/* <Front /> */}
+        <Front show={showHome} updateShow={setShowHome} />
         <article id='cuteHome'>
-            <p className='cuteHome-homePage'><span className='homePage-arrow'></span>Home</p>
+            <p onClick={handleShowHome} className='cuteHome-homePage'><span className='homePage-arrow'></span>Home</p>
+            <p className='cuteHome-contactPage'>Contact<span className='homePage-arrow'></span></p>
             <section className='cuteHome-main'>
                 {randomSite==2 && <EasterEgg sitePosition={randomSite}/> }
                 <span className='cuteHome-fridge'>
@@ -35,7 +38,9 @@ export const Home = ()=>{
 
                 <Description show={showModal}/>
 
-                <img className='cuteHome-avatar' src="/home/public/cute-avatarHome.png" alt="Avatar" />
+                <div className="cuteHome-avatarCtr">
+                    <img className='cuteHome-avatar' src="/home/public/cuteHome-avatarAnimation.png" alt="Avatar" />
+                </div>
             </section>
 
             <section className='cuteHome-bottom'>
