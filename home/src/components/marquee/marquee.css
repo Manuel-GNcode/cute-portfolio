@@ -27,7 +27,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    cursor: pointer;
+    cursor: var(--select), pointer;
     transition: transform .3s ease;
     position: relative;
 }
@@ -46,7 +46,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    cursor: pointer;
+    cursor: var(--select), pointer;
     font-size: 2rem;
     z-index: 10;
     padding: 10px 0;

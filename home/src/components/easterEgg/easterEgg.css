@@ -2,7 +2,7 @@
     position:absolute;
     width: calc(120px * var(--sDetails));
     aspect-ratio: 1/1;
-    cursor: pointer;
+    cursor: var(--select), pointer;
     overflow: auto;
 }
 .site-1 {

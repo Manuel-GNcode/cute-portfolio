@@ -23,7 +23,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    cursor: pointer;
+    cursor: var(--select), pointer;
     border: none;
 }
 

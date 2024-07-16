@@ -1,0 +1,29 @@
+.leafCtr {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+.leaf {
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-image: url('home/public/cute-flor.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    animation: fallLeaf 10s linear forwards;
+    transform-origin: top;
+}
+
+@keyframes fallLeaf {
+    0% {
+        transform: translateY(0vh) translateX(50vh) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(-50vh);
+    }
+}

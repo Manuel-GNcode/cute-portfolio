@@ -5,7 +5,7 @@ import { EasterEgg } from './src/components/easterEgg/easterEgg';
 import { Modal } from './src/components/modal/modal';
 import { useState } from 'react';
 import { Description } from './src/components/description/description';
-import { Front } from './src/components/front/front';
+// import { Front } from './src/components/front/front';
 
 export const Home = ()=>{
     const [showModal, setShowModal] = useState({visible: false, id: null});
@@ -14,7 +14,7 @@ export const Home = ()=>{
 
     return (
         <>
-        <Front show={showHome} updateShow={setShowHome} />
+        {/* <Front show={showHome} updateShow={setShowHome} /> */}
         <article id='cuteHome'>
             <p onClick={handleShowHome} className='cuteHome-homePage'><span className='homePage-arrow'></span>Home</p>
             <p className='cuteHome-contactPage'>Contact<span className='homePage-arrow'></span></p>

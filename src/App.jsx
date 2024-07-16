@@ -1,8 +1,7 @@
-import { Home } from '../home/home'
+import { Home } from '../home/home';
 //Aquí irán las rutas
 
 function App() {
-
   return (
     <>
       <Home />

@@ -12,7 +12,7 @@ export const Modal = ({id, updateModal}) => {
     useEffect(()=>{
         const cuteCtr = document.querySelector('.modal-ctr');
         cuteCtr.style.setProperty('--display', 'none');
-        cuteCtr.style.setProperty('cursor', 'zoom-in');
+        cuteCtr.style.setProperty('cursor', 'var(--zoomin), zoom-in');
 
         const handleZoom = (e)=>{
             let pointer = {
@@ -28,7 +28,7 @@ export const Modal = ({id, updateModal}) => {
 
         if (zoom) {
             cuteCtr.style.setProperty('--display', 'block');
-            cuteCtr.style.setProperty('cursor', 'zoom-out');
+            cuteCtr.style.setProperty('cursor', 'var(--zoomout), zoom-out');
             cuteCtr.addEventListener('mousemove', handleZoom)
             cuteCtr.addEventListener('mouseout', leaveZoom)
         }

@@ -1,6 +1,7 @@
 import './front.css';
 import { useRef, useEffect } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { LeafFalling } from '../leafFalling/leafFalling';
 
 export const Front = ({show, updateShow})=>{
     const cuteAvatar = useRef();
@@ -36,6 +37,7 @@ export const Front = ({show, updateShow})=>{
 
     return (
         <article ref={cuteFront} onClick={handleFront} id="cuteFront">
+            <LeafFalling fall={!show} />
             <img ref={cuteImg} className='cuteFront-background' src="home/public/cute-background.png" alt="background"/>
             <p ref={cuteText} className="cuteFront-text"><span className='cuteFront-point'></span> Click to Start <span className='cuteFront-point'></span></p>
             <div ref={cuteAvatar} className="cuteFront-avatar">
