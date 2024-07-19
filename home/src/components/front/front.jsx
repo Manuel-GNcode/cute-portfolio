@@ -13,6 +13,7 @@ export const Front = ({show, updateShow})=>{
         cuteText.current.style.opacity = '0';
         cuteAvatar.current.classList.add('hideAvatar');
         cuteImg.current.classList.add('zoomImg');
+        // sessionStorage.setItem('first', true);
 
         setTimeout(() => {
             cuteFront.current.classList.add('hideFront');
@@ -20,6 +21,7 @@ export const Front = ({show, updateShow})=>{
     }
     const showFront = () => {
         cuteFront.current.classList.remove('hideFront');
+        // sessionStorage.setItem('first', false);
         setTimeout(() => {
             cuteText.current.style.opacity = '1';
             cuteAvatar.current.classList.remove('hideAvatar');

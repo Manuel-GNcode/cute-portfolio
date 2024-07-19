@@ -138,11 +138,11 @@
 .cuteHome-bottom {
     height: 20%;
     width: 100%;
-    background: #ff0000ab;
     background-image: url('/home/public/cute-mesafront.png');
     background-size: cover;
     position: relative;
     z-index: 4;
+    cursor: var(--neutral), auto;
 }
 
 @media screen and ((width < 900px) or (height < 500px)) {
