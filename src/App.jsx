@@ -1,10 +1,5 @@
-// import { Suspense, lazy } from 'react';
-{/* <Suspense fallback={<Loading />}>
-        <Home />
-      </Suspense> */}
-      // const Home = lazy(() => import('../home/home'));
 import { Loading } from './components/loading/loading';
-import Home from '../home/home';
+import Home from './components/home/home';
 import { useState, useEffect } from 'react';
 
 
@@ -29,7 +24,7 @@ function App() {
     return () => {
       window.removeEventListener('load', handleLoad);
     };
-  }, []);
+  }, [showLoading]);
 
   return (
     <>

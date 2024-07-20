@@ -1,24 +1,32 @@
 import './home.css';
-import { Marquee } from './src/components/marquee/marquee';
-import { randomSite } from './src/constants/constants';
-import { EasterEgg } from './src/components/easterEgg/easterEgg';
-import { Modal } from './src/components/modal/modal';
-import { useState} from 'react';
-import { Description } from './src/components/description/description';
-import { Front } from './src/components/front/front';
+import { Marquee } from '../marquee/marquee';
+import { randomSite } from '../../constants/constants';
+import { EasterEgg } from '../easterEgg/easterEgg'
+import { Modal } from '../modal/modal';
+import { useState, useEffect, useRef } from 'react';
+import { Description } from '../description/description';
+import { Front } from '../front/front';
+import Contact from '../contact/contact';
 
 export default function Home() {
-    // const firstSection = sessionStorage.getItem('first') ? true : false;
     const [showModal, setShowModal] = useState({visible: false, id: null});
     const [showHome, setShowHome] = useState(true);
-    const handleShowHome = ()=>{setShowHome(true)}
+    const [showContact, setShowContact] = useState(false);
+    const handleShowHome = ()=>{setShowHome(true)};
+    const handleShowContact = ()=>{setShowContact(true)};
+    const cuteHome = useRef();
+
+    useEffect(()=>{
+        if (showContact) cuteHome.current.style.left = '-100%';
+        else cuteHome.current.style.left = '0%';
+    }, [showContact])
 
     return (
         <>
         <Front show={showHome} updateShow={setShowHome} />
-        <article id='cuteHome'>
+        <article ref={cuteHome} id='cuteHome'>
             <p onClick={handleShowHome} className='cuteHome-homePage'><span className='homePage-arrow'></span>Home</p>
-            <p className='cuteHome-contactPage'>Contact<span className='homePage-arrow'></span></p>
+            <p onClick={handleShowContact} className='cuteHome-contactPage'>Contact<span className='homePage-arrow'></span></p>
             <section className='cuteHome-main'>
                 {randomSite==2 && <EasterEgg sitePosition={randomSite}/> }
                 <span className='cuteHome-fridge'>
@@ -40,7 +48,7 @@ export default function Home() {
                 <Description show={showModal}/>
 
                 <div className="cuteHome-avatarCtr">
-                    <img className='cuteHome-avatar' src="/home/public/cuteHome-avatarAnimation.png" alt="Avatar" />
+                    <img className='cuteHome-avatar' src="/cuteHome-avatar.png" alt="Avatar" />
                 </div>
             </section>
 
@@ -49,6 +57,7 @@ export default function Home() {
             </section>
 
         </article>
+        <Contact  show={showContact} updateShow={setShowContact}/>
         </>
     );
 }

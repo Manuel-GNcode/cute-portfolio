@@ -62,12 +62,12 @@
 }
 .btn-left {
     left: -10%;
-    background-image: url('/home/public/cute-arrow.png');
+    background-image: url('/cute-arrow.png');
     animation: rowLeft 1s ease-in-out infinite alternate;
 }
 .btn-right {
     right: -10%;
-    background-image: url('/home/public/cute-arrow.png');
+    background-image: url('/cute-arrow.png');
     transform: translateY(-50%) scaleX(-1);
     animation: rowRight 1s ease-in-out infinite alternate;
 }

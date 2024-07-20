@@ -9,7 +9,7 @@
 .leaf {
     width: 50px;
     aspect-ratio: 1/1;
-    background-image: url('home/public/cute-flor.png');
+    background-image: url('/cute-flor.png');
     background-position: center;
     background-size: cover;
     position: absolute;

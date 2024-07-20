@@ -1,0 +1,309 @@
+:root {
+    --widthM: 530px;
+    --heightM: 618px;
+    --scaleM: .8;
+}
+
+#cuteContact {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    overflow: hidden;
+    left: 100%;
+    transition: left .5s linear;
+    background: linear-gradient(90deg, rgba(232,224,231,1) 0%, rgba(219,209,226,1) 90%);
+}
+
+.cuteContact-workPage {
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    background-color: var(--rouse);
+    color: #fff;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: var(--select), pointer;
+    left: 0;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-bottom-right-radius: 40px;
+}
+
+.cuteContact-main {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.cuteContact-message {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 700px;
+    height: 350px;
+    border: 5px solid var(--violet);
+    border-radius: 50px;
+    display: flex;
+    padding: 4% 2% 2%;
+    gap: 4%;
+    background-color: var(--neoWhite);
+}
+.cuteContact-flower {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background-image: url('/cuteContact-flower.png');
+    background-size: cover;
+    z-index: 4;
+}
+.cuteContact-light {
+    position: absolute;
+    width: 60%;
+    height: 15px;
+    top: 4%;
+    left: 8%;
+    background-color: #f9f4f9;
+    border-radius: 40px;
+}
+.cuteContact-title {
+    width: 40%;
+    height: fit-content;
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    background-color: var(--violet);
+    border-radius: 20px;
+}
+.cuteContact-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cuteContact-input {
+    display: flex;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--violet);
+}
+.cuteContact-input input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 4px solid var(--violet);
+    border-radius: 4px;
+    color: var(--violet);
+}
+.cuteContact-input input:hover, .cuteContact-input input:focus, .cuteContact-textarea textarea:hover, .cuteContact-textarea textarea:focus {
+    background: #ffffff70;
+}
+.cuteContact-textarea {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--violet);
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.cuteContact-textarea textarea {
+    width: 100%;
+    resize: none;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 4px solid var(--violet);
+    color: var(--violet);
+    border-radius: 4px;
+}
+.cuteContact-submit {
+    background: var(--violet);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    margin-left: auto;
+}
+.cuteContact-submit:active {
+    background: violet;
+}
+
+.cuteContact-bottom {
+    height: 20%;
+    width: 100%;
+    background-image: url('/cute-mesafront.png');
+    background-size: cover;
+    position: relative;
+    z-index: 4;
+}
+
+.cuteContact-tv {
+    position: absolute;
+    bottom: 60%;
+    left: 4%;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 340px;
+    z-index: 10;
+}
+.contact-tv {
+    width: 80%;
+}
+.contact-cara {
+    width: 90%;
+    margin-left: 10px;
+}
+.contact-arstation {
+    margin-left: -10px;
+}
+.contact-kofi {
+    width: 95%;
+}
+
+.cuteContact-ventilator {
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    display: flex;
+    z-index: 12;
+    height: 180px;
+}
+.cuteContact-food {
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    display: flex;
+    z-index: 12;
+    height: 80px;
+}
+.cuteContact-toys {
+    position: absolute;
+    left: 30%;
+    bottom: 70%;
+    height: 160px;
+    display: flex;
+    z-index: 8;
+}
+.cuteContact-bookglass {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    height: 100px;
+    display: flex;
+    z-index: 8;
+}
+
+.cuteContact-machine {
+    position: absolute;
+    right: 5%;
+    bottom: 50%;
+    z-index: 6;
+}
+#machine {
+    width: calc(var(--widthM) * var(--scaleM));
+    height: calc(var(--heightM) * var(--scaleM));
+}
+#garra {
+    position: absolute;
+    background-image: url('/cuteContact-garra.png');
+    background-position: bottom;
+    background-size: cover;
+    width: calc(100px * var(--scaleM));
+    height: calc(180px * var(--scaleM));
+    z-index: -1;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left .3s ease;
+}
+@keyframes goDown {
+    50% {
+        height: calc(350px * var(--scaleM));
+    }
+    100% {
+        height: calc(180px * var(--scaleM));
+    }
+}
+
+.machine-btns {
+    width: calc(300px * var(--scaleM));
+    height: calc(60px * var(--scaleM));
+    position: absolute;
+    z-index: 10;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.machine-btns span {
+    width: 30%;
+    height: 100%;
+    cursor: var(--select),pointer;
+}
+.machine-btns span:hover {
+    transform: scale(1.1);
+}
+#machine-btn-push {
+    background-image: url('/cuteContact-btnpush.png');
+    background-size: cover;
+}
+#machine-btn-left {
+    background-image: url('/cuteContact-btnleft.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#machine-btn-right {
+    background-image: url('/cuteContact-btnright.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.cuteContact-quote {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    transform: translate(-50%);
+    width: calc(355px * var(--scaleM));
+    height: calc(325px * var(--scaleM));
+    background: var(--rouse);
+    border: 4px inset #ffffff86;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    display: none;
+}
+.cuteContact-fail {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    color: var(--rouse);
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0%;
+}
+@keyframes showFail {
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}

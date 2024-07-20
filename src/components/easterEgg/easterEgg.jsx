@@ -19,7 +19,7 @@ export const EasterEgg = ({sitePosition})=>{
         {!showEaster && 
         <>
         <span ref={easter} onClick={handleEaster} className={`cuteHome-easter site-${sitePosition+1}`}></span>
-        <audio ref={easterSound} id="cuteHome-easterSound" src="home/public/pop.mp3"></audio>
+        <audio ref={easterSound} id="cuteHome-easterSound" src="/pop.mp3"></audio>
         </>
         }
         </>

@@ -43,7 +43,7 @@ export const Modal = ({id, updateModal}) => {
         '--zoom-x': '0%',
         '--zoom-y': '0%',
         '--display': 'none',
-        '--url': `url(/home/public/${ilustrations[id].src})`
+        '--url': `url('/${ilustrations[id].src}')`
     }
 
     const [localModal, setLocalModal] = useState(null);
@@ -63,9 +63,9 @@ export const Modal = ({id, updateModal}) => {
 
     return (
         <div className="cuteHome-modal">
-            <button onClick={handleScale} type='button' className='cuteHome-modal-btn'></button>
+            <span onClick={handleScale} type='button' className='cuteHome-modal-btn'></span>
             <div onClick={changeZoom} className="modal-ctr" style={styleModal}>
-                <img className='modal-ilustration' src={'home/public/'+ilustrations[id].src} alt={ilustrations[id].name} />
+                <img className='modal-ilustration' src={'/'+ilustrations[id].src} alt={ilustrations[id].name} />
             </div>
         </div>
     );

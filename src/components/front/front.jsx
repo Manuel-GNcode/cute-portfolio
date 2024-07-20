@@ -13,7 +13,6 @@ export const Front = ({show, updateShow})=>{
         cuteText.current.style.opacity = '0';
         cuteAvatar.current.classList.add('hideAvatar');
         cuteImg.current.classList.add('zoomImg');
-        // sessionStorage.setItem('first', true);
 
         setTimeout(() => {
             cuteFront.current.classList.add('hideFront');
@@ -21,7 +20,6 @@ export const Front = ({show, updateShow})=>{
     }
     const showFront = () => {
         cuteFront.current.classList.remove('hideFront');
-        // sessionStorage.setItem('first', false);
         setTimeout(() => {
             cuteText.current.style.opacity = '1';
             cuteAvatar.current.classList.remove('hideAvatar');
@@ -40,10 +38,10 @@ export const Front = ({show, updateShow})=>{
     return (
         <article ref={cuteFront} onClick={handleFront} id="cuteFront">
             <LeafFalling fall={!show} />
-            <img ref={cuteImg} className='cuteFront-background' src="home/public/cute-background.png" alt="background"/>
+            <img ref={cuteImg} className='cuteFront-background' src="/cute-background.png" alt="background"/>
             <p ref={cuteText} className="cuteFront-text"><span className='cuteFront-point'></span> Click to Start <span className='cuteFront-point'></span></p>
             <div ref={cuteAvatar} className="cuteFront-avatar">
-                <img src="home/public/cute-avatar.png" alt="Avatar" />
+                <img src="/cute-avatar.png" alt="Avatar" />
             </div>
         </article>
     )
