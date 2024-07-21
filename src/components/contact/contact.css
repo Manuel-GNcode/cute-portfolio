@@ -45,7 +45,7 @@
     top: 15%;
     left: 5%;
     width: 700px;
-    height: 350px;
+    height: fit-content;
     border: 5px solid var(--violet);
     border-radius: 50px;
     display: flex;
@@ -88,10 +88,41 @@
     flex-direction: column;
     gap: 10px;
 }
+.cuteContact-form-subject {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-weight: bold;
+    color: var(--violet);
+}
+.cuteContact-radio {
+    display: flex;
+    flex-direction: column;
+    cursor: var(--select), pointer;
+}
+.subject-greetings, .subject-comission {
+    width: 100px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 5px;
+}
+.subject-greetings{
+    background-image: url('/cuteContact-greetings.png');
+}
+.subject-comission{
+    background-image: url('/cuteContact-comission.png');
+}
+.cuteContact-form-subject input {
+    position: absolute;
+    opacity: 0;
+}
+input[type='radio']:checked + span {
+    border: 2px solid #fff;
+}
+
 .cuteContact-input {
     display: flex;
     gap: 10px;
-    font-size: 1.2rem;
     font-weight: bold;
     color: var(--violet);
 }
@@ -108,7 +139,6 @@
     background: #ffffff70;
 }
 .cuteContact-textarea {
-    font-size: 1.2rem;
     font-weight: bold;
     color: var(--violet);
     text-align: center;
@@ -135,9 +165,12 @@
     border-radius: 10px;
     width: fit-content;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0 20px;
     margin-left: auto;
+}
+.cuteContact-submit:hover {
+    background: var(--rouse);
 }
 .cuteContact-submit:active {
     background: violet;
@@ -161,19 +194,31 @@
     width: 320px;
     height: 340px;
     z-index: 10;
+    text-align: center;
 }
 .contact-tv {
     width: 80%;
 }
+.cuteContact-tv > a:hover {
+    transform: scale(1.1);
+}
+.contact-instagram {
+    width: 100%;
+}
 .contact-cara {
     width: 90%;
-    margin-left: 10px;
 }
 .contact-arstation {
+    width: 100%;
     margin-left: -10px;
 }
 .contact-kofi {
-    width: 95%;
+    width: 100%;
+    margin-left: 10px;
+}
+.cuteContact-tv a img {
+    width: 100%;
+    margin: -2px 0;
 }
 
 .cuteContact-ventilator {
@@ -194,11 +239,12 @@
 }
 .cuteContact-toys {
     position: absolute;
-    left: 30%;
+    left: 35%;
     bottom: 70%;
     height: 160px;
     display: flex;
     z-index: 8;
+    pointer-events: none;
 }
 .cuteContact-bookglass {
     position: absolute;

@@ -1,6 +1,7 @@
 import './contact.css';
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
+import { getRandomBall } from '../../functions/functions';
 
 let position = 50;
 
@@ -27,9 +28,15 @@ export default function Contact({show, updateShow}) {
         setIsCatching(true);
         const getReward = Math.random() > 1/2;
         garra.current.style.animation = 'goDown 4s ease-in-out';
+        if (getReward) {
+            setTimeout(() => {
+                garra.current.style.backgroundImage = getRandomBall();
+            }, 2000);
+        }
         fail.current.style.animation = '';
         setTimeout(() => {
             garra.current.style.animation = '';
+            garra.current.style.backgroundImage = 'url(/cuteContact-garra.png)';
             if (getReward) quote.current.style.display = 'inherit';
             else {
                 setIsCatching(false);
@@ -64,7 +71,20 @@ export default function Contact({show, updateShow}) {
                     <span className="cuteContact-light"></span>
                     <h1 className='cuteContact-title'>Contact</h1>
                     <form className='cuteContact-form' action="#">
-                        <label className='cuteContact-input'><p>Subject:</p><input name='name' type="text" /></label>
+                        <div className="cuteContact-form-subject">
+                            <p>Subject:</p>
+                            <label className='cuteContact-radio'>
+                                <p>Greetings</p>
+                                <input defaultChecked name='subject' value='Greetings' type="radio" />
+                                <span className='subject-greetings'></span>
+                            </label>
+                            <label className='cuteContact-radio'>
+                                <p>Comission</p>
+                                <input name='subject' value='Comission' type="radio" />
+                                <span className='subject-comission'></span>
+                            </label>
+                        </div>
+
                         <label className='cuteContact-input'><p>E-mail:</p> <input name='email' type="email" /></label>
                         <label className='cuteContact-input'><p>Name:</p><input name='name' type="text" /></label>
                         <label className='cuteContact-textarea'><p>Message</p> <textarea name="message"></textarea></label>
@@ -76,10 +96,18 @@ export default function Contact({show, updateShow}) {
             <section className="cuteContact-bottom">
                 <div className="cuteContact-tv">
                     <img className='contact-tv' src="/cuteContact-tv.png" alt="TV with logo" />
-                    <img className='contact-instagram' src="/cuteContact-bookinstagram.png" alt="Instagram" />
-                    <img className='contact-cara' src="/cuteContact-bookcara.png" alt="Cara" />
-                    <img className='contact-arstation' src="/cuteContact-bookarstation.png" alt="Arstation" />
-                    <img className='contact-kofi' src="/cuteContact-bookkofi.png" alt="Ko-fi" />
+                    <a className='contact-instagram' href='http://instagram.com/siriuschan_/' target='_blank' aria-label='Link de Instagram'>
+                        <img src="/cuteContact-bookinstagram.png" alt="Instagram" />
+                    </a>
+                    <a className='contact-cara' href='http://cara.app/siriuschan' target='_blank' aria-label='Link de Cara'>
+                        <img src="/cuteContact-bookcara.png" alt="Cara" />
+                    </a>
+                    <a className='contact-arstation' href='http://artstation.com/siriuschan' target='_blank' aria-label='Link de Arstation'>
+                        <img src="/cuteContact-bookarstation.png" alt="Arstation" />
+                    </a>
+                    <a className='contact-kofi' href='http://ko-fi.com/siriuschan' target='_blank' aria-label='Link de Ko-fi'>
+                        <img src="/cuteContact-bookkofi.png" alt="Ko-fi" />
+                    </a>
                 </div>
                 <div className='cuteContact-ventilator'>
                     <img src="cuteContact-ventilator.png" alt="Ventilator" />

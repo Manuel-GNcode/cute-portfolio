@@ -40,9 +40,9 @@ export const Front = ({show, updateShow})=>{
             <LeafFalling fall={!show} />
             <img ref={cuteImg} className='cuteFront-background' src="/cute-background.png" alt="background"/>
             <p ref={cuteText} className="cuteFront-text"><span className='cuteFront-point'></span> Click to Start <span className='cuteFront-point'></span></p>
-            <div ref={cuteAvatar} className="cuteFront-avatar">
+            <figure ref={cuteAvatar} className="cuteFront-avatar">
                 <img src="/cute-avatar.png" alt="Avatar" />
-            </div>
+            </figure>
         </article>
     )
 }

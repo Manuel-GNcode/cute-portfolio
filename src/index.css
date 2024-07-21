@@ -36,6 +36,6 @@ p, h1, h2, input, label, textarea, button {
 label {
   cursor: var(--neutral), auto;
 }
-input, textarea, button {
+input, textarea, button, a {
   cursor: var(--select), pointer;
 }

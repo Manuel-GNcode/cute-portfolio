@@ -36,7 +36,7 @@ export default function Home() {
                 <div className='cuteHome-details'>
                     {randomSite==1 && <EasterEgg sitePosition={randomSite} />}
                     <div className="cuteHome-furnitures">
-                        <span className="cuteHome-kofi"></span>
+                        <a target='_blank' href='#' className="cuteHome-kofi" aria-label='Link de ko-fi'></a>
                         <span className="cuteHome-microondas"></span>
                         <span className="cuteHome-plates"></span>
                     </div>
@@ -47,9 +47,9 @@ export default function Home() {
 
                 <Description show={showModal}/>
 
-                <div className="cuteHome-avatarCtr">
+                <figure className="cuteHome-avatarCtr">
                     <img className='cuteHome-avatar' src="/cuteHome-avatar.png" alt="Avatar" />
-                </div>
+                </figure>
             </section>
 
             <section className='cuteHome-bottom'>
