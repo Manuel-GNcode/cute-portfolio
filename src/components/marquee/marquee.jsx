@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ilustrations } from '../../constants/constants';
 import { useState, useEffect } from 'react';
 
-export const Marquee = ({updateModal}) => {
+export const Marquee = ({updateModal, setIsLoaded}) => {
     const [localModal, setLocalModal] = useState(null);
     useEffect(()=>{
         if (localModal !== null) {
@@ -41,6 +41,7 @@ export const Marquee = ({updateModal}) => {
 
     const renderIlustrations = ()=>{
         const handleScale = (item)=>{
+            setIsLoaded(false);
             setLocalModal({visible:true, id:item.target.id.slice(-1)});
             document.querySelectorAll('.cuteHome-project').forEach(project=>{
                 project.classList.remove('active');
@@ -71,5 +72,6 @@ export const Marquee = ({updateModal}) => {
 }
 
 Marquee.propTypes = {
-    updateModal: PropTypes.func
+    updateModal: PropTypes.func,
+    setIsLoaded: PropTypes.func,
 }

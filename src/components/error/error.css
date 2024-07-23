@@ -1,0 +1,53 @@
+.cuteError {
+    height: 100%;
+    background: #d8d7e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuteError-img {
+    width: 600px;
+}
+.cuteError-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.cuteError-content {
+    width: 400px;
+    height: fit-content;
+    color: #777d9f;
+}
+.cuteError-content h1 {
+    font-family: Impact, sans-serif;
+    font-size: 6rem;
+}
+.cuteError-content h2 {
+    font-size: 2rem;
+    margin: -10px 0 20px;
+}
+
+.cuteError-link {
+    background: #777d9f;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 15px;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.cuteError-link:hover {
+    transform: scale(1.1);
+}
+.cuteError-link span {
+    height: 0;
+    width: 0;
+    border: 10px solid transparent;
+    border-left: 10px solid #fff;
+    margin-right: -10px;
+}

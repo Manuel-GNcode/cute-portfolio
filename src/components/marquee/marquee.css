@@ -84,4 +84,5 @@
 .active {
     transform: scale(1.1);
     filter: drop-shadow(0 5px 5px #a8a2b4);
+    pointer-events: none;
 }

@@ -2,13 +2,16 @@ import './home.css';
 import { Marquee } from '../marquee/marquee';
 import { randomSite } from '../../constants/constants';
 import { EasterEgg } from '../easterEgg/easterEgg'
-import { Modal } from '../modal/modal';
 import { useState, useEffect, useRef } from 'react';
 import { Description } from '../description/description';
 import { Front } from '../front/front';
 import Contact from '../contact/contact';
+import { lazy, Suspense } from 'react';
+
+const Modal = lazy(()=>import('../modal/modal'))
 
 export default function Home() {
+    const [isImgLoaded, setIsImgLoaded] = useState(false);
     const [showModal, setShowModal] = useState({visible: false, id: null});
     const [showHome, setShowHome] = useState(true);
     const [showContact, setShowContact] = useState(false);
@@ -43,7 +46,10 @@ export default function Home() {
                     <span className="cuteHome-table"></span>
                 </div>
 
-                {showModal.visible && <Modal id={showModal.id} updateModal={setShowModal} />}
+                {showModal.visible &&
+                <Suspense fallback={<p>Loading...</p>}>
+                    <Modal id={showModal.id} updateModal={setShowModal} isLoaded={isImgLoaded} setIsLoaded={setIsImgLoaded} />
+                </Suspense>}
 
                 <Description show={showModal}/>
 
@@ -53,7 +59,7 @@ export default function Home() {
             </section>
 
             <section className='cuteHome-bottom'>
-                <Marquee updateModal={setShowModal} />
+                <Marquee updateModal={setShowModal} setIsLoaded={setIsImgLoaded} />
             </section>
 
         </article>

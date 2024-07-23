@@ -3,7 +3,11 @@ import { ilustrations } from '../../constants/constants';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-export const Modal = ({id, updateModal}) => {
+const Modal = ({id, updateModal, isLoaded, setIsLoaded}) => {
+    const handleImageLoad = () => {
+        setIsLoaded(true);
+    };
+
     const [zoom, setZoom] = useState(false);
     const changeZoom = ()=>{
         setZoom(!zoom);
@@ -64,8 +68,9 @@ export const Modal = ({id, updateModal}) => {
     return (
         <div className="cuteHome-modal">
             <span onClick={handleScale} className='cuteHome-modal-btn'></span>
+            {!isLoaded && <span className='cuteHome-modal-load'><p>Loading...</p></span>}
             <div onClick={changeZoom} className="modal-ctr" style={styleModal}>
-                <img className='modal-ilustration' src={'/'+ilustrations[id].src} alt={ilustrations[id].name} />
+                <img onLoad={handleImageLoad} className='modal-ilustration' src={'/'+ilustrations[id].src} alt={ilustrations[id].name} />
             </div>
         </div>
     );
@@ -76,5 +81,8 @@ Modal.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    updateModal: PropTypes.func
+    updateModal: PropTypes.func,
+    isLoaded: PropTypes.bool,
+    setIsLoaded: PropTypes.func
 }
+export default Modal

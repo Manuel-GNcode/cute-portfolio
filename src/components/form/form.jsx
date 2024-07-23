@@ -1,30 +1,43 @@
 import './form.css';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Form = () => {
-    const navigate = useNavigate();
+    const [isSend, setIsSend] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
+        const form = event.target;
+        const formData = new FormData(form);
 
         formData.append("access_key", "ec67ed72-11e8-4900-99d5-07be14ebc439");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            },
-            body: json
-        }).then((res) => res.json());
+        setIsLoading(true);
 
-        if (res.success) {
-            navigate('/thanks');
-        } //agregar else si es necesario
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            }).then((res) => res.json());
+    
+            if (res.success) {
+                setIsSend(true);
+                form.reset();
+            } else {
+                alert('Something was wrong, try again.')
+            }
+        } catch (error) {
+            console.error('Error', error);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -34,6 +47,9 @@ export const Form = () => {
             <h1 className='cuteContact-title'>Contact</h1>
 
             <form onSubmit={handleSubmit} className='cuteContact-form'>
+                {isSend && <span className="form-send">
+                    <p>Thank you for contacting me, I will respond to you as soon as possible!</p>
+                </span>}
                 <div className="cuteContact-form-subject">
                     <p>Subject:</p>
                     <label className='cuteContact-radio'>
@@ -51,7 +67,7 @@ export const Form = () => {
                 <label className='cuteContact-input'><p>E-mail:</p> <input required name='email' type="email" /></label>
                 <label className='cuteContact-input'><p>Name:</p><input required name='name' type="text" /></label>
                 <label className='cuteContact-textarea'><p>Message</p> <textarea required name="message"></textarea></label>
-                <button className='cuteContact-submit' type='submit'>Send</button>
+                <button className='cuteContact-submit' type='submit'>{isLoading?'Loading':'Send'}</button>
             </form>
         </div>
     )
