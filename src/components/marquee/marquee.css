@@ -2,7 +2,7 @@
     --visibleProjects: 3;
 }
 .cuteHome-marquee {
-    width: calc(var(--sDetails) * 800px);
+    width: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,7 @@
     margin: 0 auto;
     height: 100%;
 }
+
 .cuteHome-slideCtr {
     width: 100%;
     position: relative;
@@ -29,14 +30,14 @@
     justify-content: center;
     cursor: var(--select), pointer;
     transition: transform .3s ease;
-    position: relative;
 }
 .cuteHome-project-img {
     max-width: 100%;
     pointer-events: none;
     transform: translateY(-25%);
-    position: relative;
-    z-index: 50;
+}
+#project-0 img {
+    max-width: 80%;
 }
 
 .cuteHome-project:hover .cuteHome-project-img {
@@ -47,9 +48,7 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: var(--select), pointer;
-    font-size: 2rem;
     z-index: 10;
-    padding: 10px 0;
     width: 80px;
     height: 80px;
     background: none;

@@ -21,7 +21,7 @@
     height: 100%;
     object-fit: fill;
     z-index: 10;
-    filter: brightness(100%) blur(2px);
+    filter: blur(2px);
     transition: transform .8s ease .2s;
 }
 .zoomImg {
@@ -50,11 +50,6 @@
         margin-left: calc(var(--wAvatar)* -1 * var(--sAvatar));
     }
 }
-@keyframes pulseAvatar {
-    to {
-        transform: translateX(-50%) scale(1.05);
-    }
-}
 
 .cuteFront-text {
     position: absolute;
@@ -63,7 +58,6 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.2rem;
-    user-select: none;
     color: var(--rouse);
     animation: pulse .8s linear infinite alternate;
     cursor: var(--select), pointer;
@@ -84,16 +78,5 @@
 @keyframes pulse {
     to {
         transform: translateX(-50%) scale(1.1);
-    }
-}
-
-@media screen and (width < 900px) {
-    :root {
-        --sAvatar: 1;
-    }
-}
-@media screen and (height < 500px) {
-    :root {
-        --sAvatar: 1;
     }
 }

@@ -36,7 +36,7 @@ export default function Home() {
                 <div className='cuteHome-details'>
                     {randomSite==1 && <EasterEgg sitePosition={randomSite} />}
                     <div className="cuteHome-furnitures">
-                        <a target='_blank' href='#' className="cuteHome-kofi" aria-label='Link de ko-fi'></a>
+                        <a target='_blank' href='http://ko-fi.com/siriuschan' className="cuteHome-kofi" aria-label='Link de ko-fi'></a>
                         <span className="cuteHome-microondas"></span>
                         <span className="cuteHome-plates"></span>
                     </div>

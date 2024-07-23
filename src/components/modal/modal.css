@@ -1,13 +1,13 @@
 .cuteHome-modal {
     position: absolute;
     z-index: 6;
-    width: calc(750px * var(--sDetails));
-    height: calc(400px * var(--sDetails));
+    width: 750px;
+    height: 400px;
     bottom: 32px;
     background: #a8a2b4;
     left: 50%;
     transform: translateX(-60%);
-    border: 8px solid #fff;
+    border: 8px solid var(--white);
     border-radius: 60px;
     padding: 16px;
 }
@@ -16,7 +16,7 @@
     left: 50%;
     top: -8%;
     transform: translateX(-50%);
-    height: calc(50px * var(--sDetails));;
+    height: 50px;
     aspect-ratio: 1/1;
     background-image: url('/cute-home-x.png');
     background-size: contain;

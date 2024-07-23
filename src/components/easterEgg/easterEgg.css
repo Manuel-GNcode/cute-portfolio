@@ -1,6 +1,6 @@
 .cuteHome-easter {
     position:absolute;
-    width: calc(120px * var(--sDetails));
+    width: 120px;
     aspect-ratio: 1/1;
     cursor: var(--select), pointer;
     overflow: auto;

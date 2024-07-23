@@ -1,0 +1,92 @@
+#machine {
+    width: calc(var(--widthM) * var(--scaleM));
+    height: calc(var(--heightM) * var(--scaleM));
+}
+#garra {
+    position: absolute;
+    background-image: url('/cuteContact-garra.png');
+    background-position: bottom;
+    background-size: cover;
+    width: calc(100px * var(--scaleM));
+    height: calc(180px * var(--scaleM));
+    z-index: -1;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left .3s ease;
+}
+@keyframes goDown {
+    50% {
+        height: calc(350px * var(--scaleM));
+    }
+    100% {
+        height: calc(180px * var(--scaleM));
+    }
+}
+
+.machine-btns {
+    width: calc(300px * var(--scaleM));
+    height: calc(60px * var(--scaleM));
+    position: absolute;
+    z-index: 10;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.machine-btns span {
+    width: 30%;
+    height: 100%;
+    cursor: var(--select),pointer;
+}
+.machine-btns span:hover {
+    transform: scale(1.1);
+}
+#machine-btn-push {
+    background-image: url('/cuteContact-btnpush.png');
+    background-size: contain;
+}
+#machine-btn-left, #machine-btn-right {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#machine-btn-left {
+    background-image: url('/cuteContact-btnleft.png');
+}
+#machine-btn-right {
+    background-image: url('/cuteContact-btnright.png');
+    background-position: left;
+}
+.cuteContact-quote {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    transform: translate(-50%);
+    width: calc(355px * var(--scaleM));
+    height: calc(325px * var(--scaleM));
+    background: var(--rouse);
+    border: 4px inset #ffffff86;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    display: none;
+}
+.cuteContact-fail {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    color: var(--rouse);
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0%;
+}
+@keyframes showFail {
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}

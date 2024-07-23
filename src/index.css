@@ -2,6 +2,7 @@
   --rouse: #d797aa;
   --violet: #d8b3cf;
   --neoWhite: #e9dbe9;
+  --white: #fff;
   --select: url('/cursor-select.png');
   --zoomin: url('/cursor-zoomin.png');
   --zoomout: url('/cursor-zoomout.png');
@@ -22,20 +23,40 @@
   src: url('/tipografia/playwrite/PlaywriteDEGrund-VariableFont_wght.ttf');
 }
 body {
-  overflow: hidden;
+  overflow-y: hidden;
 }
-
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--white);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--rouse);
+  border-radius: 10px;
+  border: 2px solid var(--white);
+}
 #root {
   height: 100vh;
+  min-width: 1250px;
+  min-height: 650px;
+  overflow: hidden;
+  position: relative;
   font-size: 16px;
-  cursor: var(--neutral) 0 0, auto;
 }
 p, h1, h2, input, label, textarea, button {
   font-family: 'playwrite', 'dosis', sans-serif;
 }
-label {
+label, body {
   cursor: var(--neutral), auto;
 }
 input, textarea, button, a {
   cursor: var(--select), pointer;
+}
+
+@media screen and (height < 650px) {
+  body {
+    overflow-y: auto;
+  }
 }

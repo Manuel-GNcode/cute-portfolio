@@ -1,5 +1,4 @@
 :root {
-    --sDetails: 1;
     --widthAvatar: 949px;
     --heightAvatar: 1261px;
     --scaleAvatar: 0.32;
@@ -19,7 +18,7 @@
     top: 0;
     z-index: 20;
     background-color: var(--rouse);
-    color: #fff;
+    color: var(--white);
     padding: 8px 20px;
     font-weight: bold;
     font-size: 1.5rem;
@@ -30,18 +29,17 @@
 }
 .cuteHome-homePage {
     left: 0;
-    border-bottom: 4px solid #fff;
-    border-right: 4px solid #fff;
+    border-bottom: 4px solid var(--white);
+    border-right: 4px solid var(--white);
     border-bottom-right-radius: 40px;
 }
 .cuteHome-contactPage {
     right: 0;
-    border-bottom: 4px solid #fff;
-    border-left: 4px solid #fff;
+    border-bottom: 4px solid var(--white);
+    border-left: 4px solid var(--white);
     border-bottom-left-radius: 40px;
 }
 .homePage-arrow {
-    display: inline-block;
     border: 15px solid transparent;
     border-right: 15px solid #fff;
     width: 0;
@@ -60,16 +58,16 @@
     background-image: url('/cute-background2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* agregar media query 100% 100%*/
 }
+
 .cuteHome-fridge {
-    height: calc(400px * var(--sDetails));
-    width: calc(300px * var(--sDetails));
+    height: 400px;
+    width: 300px;
     position: absolute;
     bottom: 0;
     background-image: url('/cute-nevera.png');
     background-size: cover;
-    left: calc(var(--sDetails) * 10%);
+    left: 10%;
 }
 
 .cuteHome-details {
@@ -78,18 +76,18 @@
     right: 0;
     display: flex;
     flex-direction: column;
-    width: calc(800px * var(--sDetails));
+    width: 800px;
 }
 .cuteHome-furnitures {
     display: flex;
     flex-direction: row;
-    height: calc(var(--sDetails) * 120px);
+    height: 120px;
     justify-content: space-evenly;
     align-items: end;
 }
 .cuteHome-kofi {
     height: 100%;
-    width: calc(var(--sDetails)*200px);
+    width: 200px;
     background-image: url('/cute-kofi.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -99,34 +97,31 @@
 .cuteHome-kofi:hover {
     transform: scale(1.1);
 }
-.cuteHome-microondas {
+.cuteHome-microondas, .cuteHome-plates {
     height: 80%;
-    width: calc(var(--sDetails)*200px);
-    background-image: url('/cute-microondas.png');
+    width: 200px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.cuteHome-microondas {
+    background-image: url('/cute-microondas.png');
 }
 .cuteHome-plates {
-    height: 80%;
-    width: calc(var(--sDetails)*200px);
     background-image: url('/cute-platos.png');
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 .cuteHome-table {
-    height: 100px;
+    height: 120px;
     background-image: url('/cute-mesaback.png');
     background-size:cover;
 }
 
 .cuteHome-avatarCtr {
     position: absolute;
-    bottom: -1%;
+    bottom: -2%;
     right: 10%;
     z-index: 8;
     pointer-events: none;
     width: calc(var(--widthAvatar)* var(--scaleAvatar));
-    overflow: hidden;
 }
 .cuteHome-avatar {
     height: calc(var(--heightAvatar)* var(--scaleAvatar));
@@ -138,14 +133,4 @@
     background-size: cover;
     position: relative;
     z-index: 4;
-}
-
-@media screen and ((width < 900px) or (height < 500px)) {
-    :root {
-        --sDetails: .8;
-        --scaleAvatar: 0.25;
-    }
-    .cuteHome-main {
-        background-size: 100% 100%;
-    }
 }

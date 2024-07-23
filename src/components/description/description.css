@@ -29,7 +29,7 @@
 .description-icon {
     width: 50px;
     height: 100%;
-    background-image: url('home/public/ai.png');
+    background-image: url('/Ai.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;

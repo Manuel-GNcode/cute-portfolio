@@ -1,0 +1,123 @@
+.cuteContact-flower {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background-image: url('/cuteContact-flower.png');
+    background-size: cover;
+    z-index: 4;
+}
+.cuteContact-light {
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    top: 3%;
+    left: 8%;
+    background-color: #f9f4f9;
+    border-radius: 40px;
+}
+.cuteContact-title {
+    width: 40%;
+    height: fit-content;
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    background-color: var(--violet);
+    border-radius: 20px;
+}
+.cuteContact-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cuteContact-form-subject {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-weight: bold;
+    color: var(--violet);
+}
+.cuteContact-radio {
+    display: flex;
+    flex-direction: column;
+    cursor: var(--select), pointer;
+    text-align: center;
+}
+.subject-greetings, .subject-comission {
+    width: 110px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 5px;
+}
+.subject-greetings{
+    background-image: url('/cuteContact-greetings.png');
+}
+.subject-comission{
+    background-image: url('/cuteContact-comission.png');
+}
+.cuteContact-form-subject input {
+    position: absolute;
+    opacity: 0;
+}
+input[type='radio']:checked + span {
+    border: 2px solid #fff;
+    transform: scale(1.1);
+}
+.cuteContact-input {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    color: var(--violet);
+}
+.cuteContact-input input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 4px solid var(--violet);
+    border-radius: 4px;
+    color: var(--violet);
+}
+.cuteContact-input input:hover, .cuteContact-input input:focus, .cuteContact-textarea textarea:hover, .cuteContact-textarea textarea:focus {
+    background: #ffffff70;
+}
+.cuteContact-textarea {
+    font-weight: bold;
+    color: var(--violet);
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.cuteContact-textarea textarea {
+    width: 100%;
+    resize: none;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 4px solid var(--violet);
+    color: var(--violet);
+    border-radius: 4px;
+}
+.cuteContact-submit {
+    background: var(--violet);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-left: auto;
+}
+.cuteContact-submit:hover {
+    background: var(--rouse);
+}
+.cuteContact-submit:active {
+    background: violet;
+}

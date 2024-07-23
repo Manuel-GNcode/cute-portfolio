@@ -63,7 +63,7 @@ export const Modal = ({id, updateModal}) => {
 
     return (
         <div className="cuteHome-modal">
-            <span onClick={handleScale} type='button' className='cuteHome-modal-btn'></span>
+            <span onClick={handleScale} className='cuteHome-modal-btn'></span>
             <div onClick={changeZoom} className="modal-ctr" style={styleModal}>
                 <img className='modal-ilustration' src={'/'+ilustrations[id].src} alt={ilustrations[id].name} />
             </div>
