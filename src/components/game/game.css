@@ -62,16 +62,23 @@
 .cuteContact-quote {
     position: absolute;
     left: 50%;
-    top: 17%;
-    transform: translate(-50%);
-    width: calc(355px * var(--scaleM));
-    height: calc(325px * var(--scaleM));
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: fit-content;
     background: var(--rouse);
-    border: 4px inset #ffffff86;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    color: var(--white);
+    border-radius: 20px;
     display: none;
+    text-align: center;
+    padding: 20px 12px;
 }
+.cuteContact-quote span {
+    display: block;
+    font-size: .7rem;
+    margin-top: 10px;
+}
+
 .cuteContact-fail {
     position: absolute;
     left: 50%;

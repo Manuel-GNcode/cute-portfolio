@@ -60,8 +60,8 @@ export const Marquee = ({updateModal, setIsLoaded}) => {
 
     return (
         <div className='cuteHome-marquee'>
-            <button onClick={prevPlate} className="cuteHome-btn btn-left"></button>
-            <button onClick={nextPlate} className="cuteHome-btn btn-right"></button>
+            <button aria-label='Button left Marquee' onClick={prevPlate} className="cuteHome-btn btn-left"></button>
+            <button aria-label='Button right Marquee' onClick={nextPlate} className="cuteHome-btn btn-right"></button>
             <div className="cuteHome-slideCtr">
                 <div className="cuteHome-slide">
                     {renderIlustrations()}

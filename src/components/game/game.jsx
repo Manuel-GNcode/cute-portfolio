@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
-import { getRandomBall } from '../../functions/functions';
+import { getRandomString } from '../../functions/functions';
+import { randomQuotes } from '../../constants/constants';
+import { colorBalls } from '../../constants/constants';
 import './game.css'
 let position = 50;
 
@@ -20,7 +22,7 @@ export const Game = ()=>{
         garra.current.style.animation = 'goDown 4s ease-in-out';
         if (getReward) {
             setTimeout(() => {
-                garra.current.style.backgroundImage = getRandomBall();
+                garra.current.style.backgroundImage = getRandomString(colorBalls);
             }, 2000);
         }
         fail.current.style.animation = '';
@@ -54,9 +56,10 @@ export const Game = ()=>{
     return (
         <div className='cuteContact-machine'>
             <p ref={fail} className='cuteContact-fail'>Oops!, try again</p>
-            <span onClick={handleReward} ref={quote} className="cuteContact-quote">
-                Tap to play again.
-            </span>
+            <p onClick={handleReward} ref={quote} className="cuteContact-quote">
+                {getRandomString(randomQuotes)}
+                <span>(Tap to play again)</span>
+            </p>
             <span ref={garra} id='garra'></span>
             <img src='/cuteContact-machine.png' alt='Game machine' id='machine' />
             <div className="machine-btns">
