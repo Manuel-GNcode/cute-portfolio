@@ -1,4 +1,4 @@
-.roteMobi { 
-    font-size: 1.5rem;
-    color: var(--rouse);
+.roteMobi img {
+    width: auto;
+    height: 60px;
 }

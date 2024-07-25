@@ -4,66 +4,80 @@ export const ilustrations = [
     {
         name: 'Jam',
         id: 0,
-        url: 'food-jam.png',
+        url: 'food-jam.webp',
         description: 'Color Wheel',
-        src: 'Color-Wheel.jpg',
-        stack: 'ai'
+        src: 'illustration-0-colorWheel.webp',
+        stack: 'ai',
+        wid: '484',
+        heig: '317',
     },
     {
         name: 'CatBurger',
         id: 1,
-        url: 'food-catBurger.png',
+        url: 'food-burger.webp',
         description: 'McMiku',
-        src: 'McMiku.jpg',
-        stack: 'ai'
+        src: 'illustration-1-mcMiku.webp',
+        stack: 'ai',
+        wid: '644',
+        heig: '412',
     },
     {
         name: 'Malteada',
         id: 2,
-        url: 'food-malteada.png',
+        url: 'food-milkshake.webp',
         description: 'Ai Hoshino',
-        src: 'Ai-Hoshino.jpg',
-        stack: 'ai'
+        src: 'illustration-2-ai-hoshino.webp',
+        stack: 'ai',
+        wid: '303',
+        heig: '452',
     },
     {
         name: 'Ice Cream',
         id: 3,
-        url: 'food-iceCream.png',
+        url: 'food-icecream.webp',
         description: 'Sakura Miku',
-        src: 'Sakura-Miku.jpg',
-        stack: 'ai'
+        src: 'illustration-3-sakuraMiku.webp',
+        stack: 'ai',
+        wid: '429',
+        heig: '381',
     },
     {
         name: 'Candy',
         id: 4,
-        url: 'food-candy.png',
+        url: 'food-lollipop.webp',
         description: 'Haerin',
-        src: 'Haerin.jpg',
-        stack: 'ai'
+        src: 'illustration-4-haerin.webp',
+        stack: 'ai',
+        wid: '251',
+        heig: '307',
     },
     {
         name: 'Macarron',
         id: 5,
-        url: 'food-macarron.png',
+        url: 'food-macaroon.webp',
         description: 'Miku Monalisa',
-        src: 'Miku-Monalisa.jpg',
-        stack: 'ai'
+        src: 'illustration-5-strawberryMiku.webp',
+        stack: 'ai',
+        wid: '524',
+        heig: '364',
     },
     {
         name: 'Juice',
         id: 6,
-        url: 'food-juice.png',
+        url: 'food-juice.webp',
         description: 'Miku Popipo',
-        src: 'Miku-Popipo.jpg',
-        stack: 'ai'
+        src: 'illustration-6-popipoMiku.webp',
+        stack: 'ai',
+        wid: '346',
+        heig: '429',
     },
 ]
 
 export const colorBalls = [
-    'url(/cuteContact-greenball.png)',
-    'url(/cuteContact-purpleball.png)',
-    'url(/cuteContact-rouseball.png)',
-    'url(/cuteContact-blueball.png)',
+    'url(contact/ball/ball-green.webp)',
+    'url(contact/ball/ball-purple.webp)',
+    'url(contact/ball/ball-rouse.webp)',
+    'url(contact/ball/ball-blue.webp)',
 ]
 
 export const randomQuotes = [

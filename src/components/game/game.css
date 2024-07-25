@@ -4,7 +4,7 @@
 }
 #garra {
     position: absolute;
-    background-image: url('/cuteContact-garra.png');
+    background-image: url('contact/ball/ball-none.webp');
     background-position: bottom;
     background-size: cover;
     width: calc(100px * var(--scaleM));
@@ -44,7 +44,7 @@
     transform: scale(1.1);
 }
 #machine-btn-push {
-    background-image: url('/cuteContact-btnpush.png');
+    background-image: url('contact/contact-pushButton.webp');
     background-size: contain;
 }
 #machine-btn-left, #machine-btn-right {
@@ -53,10 +53,10 @@
     background-position: right;
 }
 #machine-btn-left {
-    background-image: url('/cuteContact-btnleft.png');
+    background-image: url('contact/contact-leftButton.webp');
 }
 #machine-btn-right {
-    background-image: url('/cuteContact-btnright.png');
+    background-image: url('contact/contact-rightButton.webp');
     background-position: left;
 }
 .cuteContact-quote {

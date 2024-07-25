@@ -47,7 +47,7 @@ const Modal = ({id, updateModal, isLoaded, setIsLoaded}) => {
         '--zoom-x': '0%',
         '--zoom-y': '0%',
         '--display': 'none',
-        '--url': `url('/${ilustrations[id].src}')`
+        '--url': `url('works/illustration/${ilustrations[id].src}')`
     }
 
     const [localModal, setLocalModal] = useState(null);
@@ -70,7 +70,7 @@ const Modal = ({id, updateModal, isLoaded, setIsLoaded}) => {
             <span onClick={handleScale} className='cuteHome-modal-btn'></span>
             {!isLoaded && <span className='cuteHome-modal-load'><p>Loading...</p></span>}
             <div onClick={changeZoom} className="modal-ctr" style={styleModal}>
-                <img onLoad={handleImageLoad} className='modal-ilustration' src={'/'+ilustrations[id].src} alt={ilustrations[id].name} />
+                <img onLoad={handleImageLoad} className='modal-ilustration' src={'works/illustration/'+ilustrations[id].src} alt={ilustrations[id].name} />
             </div>
         </div>
     );

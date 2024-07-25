@@ -1,0 +1,67 @@
+.cuteCredits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    border: 1px solid black;
+    display: grid;
+    place-content: center;
+}
+.cuteCredits-book {
+    width: 950px;
+    height: 550px;
+    background-image: url('/public/contact/credits/credits-book.webp');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #d77d9e;
+}
+.cuteCredits-cherry {
+    position: absolute;
+    transform: translate(-200px, -150px);
+    width: 50px;
+    height: 50px;
+    background-image: url('contact/credits/credits-cherry.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cuteCredits-section {
+    width: 300px;
+    font-size: .9rem;
+    margin-top: -70px;
+}
+.cuteCredits-authors {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+.cuteCredits-author {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cuteCredits-author img {
+    width: 120px;
+    height: auto;
+}
+
+.cuteCredits-employee {
+    width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+.cuteCredits-employee img {
+    width: 40%;
+    height: auto;
+}
+.cuteCredits-employee caption {
+    display: block;
+}
+.cuteCredits-section h2 {
+    text-align: center;
+}

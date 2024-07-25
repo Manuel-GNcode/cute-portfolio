@@ -51,7 +51,7 @@ export const Marquee = ({updateModal, setIsLoaded}) => {
         const ctrIlustrations = ilustrations.map((ilustration)=>{
             return (
                 <span id={'project-'+ilustration.id} onClick={handleScale} key={ilustration.id} className="cuteHome-project">
-                    <img className={'cuteHome-project-img '} src={'/'+ilustration.url} alt={ilustration.name} />
+                    <img width={ilustration.wid} height={ilustration.heig} className={'cuteHome-project-img '} src={'works/food/'+ilustration.url} alt={ilustration.name} />
                 </span>
             )
         })

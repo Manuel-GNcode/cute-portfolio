@@ -34,7 +34,7 @@
     bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(var(--wAvatar) * var(--sAvatar) / 4);
+    width: 1000px;
     overflow: hidden;
     transition: transform .4s;
 }
@@ -42,12 +42,14 @@
     transform: translateY(100%) translateX(-50%);
 }
 .cuteFront-avatar img {
-    height: calc(var(--hAvatar) * var(--sAvatar));
+    width: 400%;
+    height: auto;
+    object-fit: contain;
     animation: animationAvatar .5s steps(4) infinite;
 }
 @keyframes animationAvatar {
     to {
-        margin-left: calc(var(--wAvatar)* -1 * var(--sAvatar));
+        margin-left: calc(1000px * -4);
     }
 }
 

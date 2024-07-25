@@ -5,7 +5,7 @@ export const Error = ()=>{
     return (
         <section className="cuteError">
             <figure className='cuteError-img'>
-                <img src="/cuteError-error.png" alt="Error image" />
+                <img width='969' height='464' src="error/error-404.webp" alt="Error image" />
             </figure>
             <article className='cuteError-content'>
                 <h1>404</h1>

@@ -1,8 +1,3 @@
-:root {
-    --widthL : 2141px;
-    --heightL : 413px;
-    --scaleL : 1;
-}
 .load-ctr {
     width: 100%;
     height: 100%;
@@ -14,15 +9,16 @@
     z-index: 30;
 }
 .load-ctr-img {
-    width: calc(var(--widthL)*var(--scaleL) / 4);
+    width: 550px;
     overflow: hidden;
 }
 .load-loading {
-    height: calc(var(--heightL)*var(--scaleL));
-    animation: loading 1s steps(4) infinite;
+    width: 400%;
+    height: auto;
+    animation: loading 1.2s steps(4) infinite;
 }
 @keyframes loading {
     to {
-        margin-left: calc(var(--widthL)*var(--scaleL)*-1);
+        margin-left: calc(550px * -4);
     }
 }

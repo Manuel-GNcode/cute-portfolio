@@ -38,7 +38,7 @@
     width: fit-content;
     gap: 15px;
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 5px 20px;
     margin-top: 20px;
 }
 .cuteError-link:hover {

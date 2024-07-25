@@ -32,12 +32,11 @@
     transition: transform .3s ease;
 }
 .cuteHome-project-img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     pointer-events: none;
     transform: translateY(-25%);
-}
-#project-0 img {
-    max-width: 80%;
 }
 
 .cuteHome-project:hover .cuteHome-project-img {
@@ -61,12 +60,12 @@
 }
 .btn-left {
     left: -10%;
-    background-image: url('/cute-arrow.png');
+    background-image: url('works/works-arrow.webp');
     animation: rowLeft 1s ease-in-out infinite alternate;
 }
 .btn-right {
     right: -10%;
-    background-image: url('/cute-arrow.png');
+    background-image: url('works/works-arrow.webp');
     transform: translateY(-50%) scaleX(-1);
     animation: rowRight 1s ease-in-out infinite alternate;
 }

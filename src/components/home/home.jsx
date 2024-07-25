@@ -54,7 +54,7 @@ export default function Home() {
                 <Description show={showModal}/>
 
                 <figure className="cuteHome-avatarCtr">
-                    <img className='cuteHome-avatar' src="/cuteHome-avatar.png" alt="Avatar" />
+                    <img width='949' height='1261' className='cuteHome-avatar' src="works/works-avatar.webp" alt="Avatar" />
                 </figure>
             </section>
 
