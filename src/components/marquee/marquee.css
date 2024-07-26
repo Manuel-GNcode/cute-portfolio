@@ -60,12 +60,12 @@
 }
 .btn-left {
     left: -10%;
-    background-image: url('works/works-arrow.webp');
+    background-image: url('/works/works-arrow.webp');
     animation: rowLeft 1s ease-in-out infinite alternate;
 }
 .btn-right {
     right: -10%;
-    background-image: url('works/works-arrow.webp');
+    background-image: url('/works/works-arrow.webp');
     transform: translateY(-50%) scaleX(-1);
     animation: rowRight 1s ease-in-out infinite alternate;
 }

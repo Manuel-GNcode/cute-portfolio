@@ -10,7 +10,7 @@
 .cuteCredits-book {
     width: 950px;
     height: 550px;
-    background-image: url('/public/contact/credits/credits-book.webp');
+    background-image: url('/contact/credits/credits-book.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
     transform: translate(-200px, -150px);
     width: 50px;
     height: 50px;
-    background-image: url('contact/credits/credits-cherry.webp');
+    background-image: url('/contact/credits/credits-cherry.webp');
     background-size: contain;
     background-repeat: no-repeat;
 }

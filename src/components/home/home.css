@@ -50,7 +50,7 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    background-image: url('works/works-background.webp');
+    background-image: url('/works/works-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -60,7 +60,7 @@
     width: 300px;
     position: absolute;
     bottom: 0;
-    background-image: url('works/works-fridge.webp');
+    background-image: url('/works/works-fridge.webp');
     background-size: cover;
     left: 10%;
 }
@@ -83,7 +83,7 @@
 .cuteHome-kofi {
     height: 100%;
     width: 200px;
-    background-image: url('works/works-kofi.webp');
+    background-image: url('/works/works-kofi.webp');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
@@ -99,14 +99,14 @@
     background-repeat: no-repeat;
 }
 .cuteHome-microondas {
-    background-image: url('works/works-microondas.webp');
+    background-image: url('/works/works-microondas.webp');
 }
 .cuteHome-plates {
-    background-image: url('works/works-plates.webp');
+    background-image: url('/works/works-plates.webp');
 }
 .cuteHome-table {
     height: 120px;
-    background-image: url('works/works-tableBack.webp');
+    background-image: url('/works/works-tableBack.webp');
     background-size:cover;
 }
 
@@ -125,7 +125,7 @@
 .cuteHome-bottom {
     height: 20%;
     width: 100%;
-    background-image: url('works/works-tableFront.webp');
+    background-image: url('/works/works-tableFront.webp');
     background-size: cover;
     position: relative;
     z-index: 4;

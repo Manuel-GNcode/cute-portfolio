@@ -1,14 +1,14 @@
 #machine {
-    width: calc(var(--widthM) * var(--scaleM));
-    height: calc(var(--heightM) * var(--scaleM));
+    width: 480px;
+    height: auto;
 }
 #garra {
     position: absolute;
-    background-image: url('contact/ball/ball-none.webp');
+    background-image: url('/contact/ball/ball-none.webp');
     background-position: bottom;
     background-size: cover;
-    width: calc(100px * var(--scaleM));
-    height: calc(180px * var(--scaleM));
+    width: 90px;
+    height: 160px;
     z-index: -1;
     top: 10%;
     left: 50%;
@@ -17,16 +17,16 @@
 }
 @keyframes goDown {
     50% {
-        height: calc(350px * var(--scaleM));
+        height: 320px;
     }
     100% {
-        height: calc(180px * var(--scaleM));
+        height: 160px;
     }
 }
 
 .machine-btns {
-    width: calc(300px * var(--scaleM));
-    height: calc(60px * var(--scaleM));
+    width: 260px;
+    height: 50px;
     position: absolute;
     z-index: 10;
     bottom: 15%;
@@ -44,7 +44,7 @@
     transform: scale(1.1);
 }
 #machine-btn-push {
-    background-image: url('contact/contact-pushButton.webp');
+    background-image: url('/contact/contact-pushButton.webp');
     background-size: contain;
 }
 #machine-btn-left, #machine-btn-right {
@@ -53,10 +53,10 @@
     background-position: right;
 }
 #machine-btn-left {
-    background-image: url('contact/contact-leftButton.webp');
+    background-image: url('/contact/contact-leftButton.webp');
 }
 #machine-btn-right {
-    background-image: url('contact/contact-rightButton.webp');
+    background-image: url('/contact/contact-rightButton.webp');
     background-position: left;
 }
 .cuteContact-quote {

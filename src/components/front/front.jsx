@@ -38,10 +38,10 @@ export const Front = ({show, updateShow})=>{
     return (
         <article ref={cuteFront} onClick={handleFront} id="cuteFront">
             <LeafFalling fall={!show} />
-            <img width='3840' height='2160' ref={cuteImg} className='cuteFront-background' src="home/home-background.webp" alt="background"/>
+            <img width='3840' height='2160' ref={cuteImg} className='cuteFront-background' src="/home/home-background.webp" alt="background"/>
             <p ref={cuteText} className="cuteFront-text"><span className='cuteFront-point'></span> Click to Start <span className='cuteFront-point'></span></p>
             <figure ref={cuteAvatar} className="cuteFront-avatar">
-                <img width='6714' height='1185' src="home/home-avatar.webp" alt="Avatar" />
+                <img width='6714' height='1185' src="/home/home-avatar.webp" alt="Avatar" />
             </figure>
         </article>
     )

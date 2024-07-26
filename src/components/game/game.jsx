@@ -61,7 +61,7 @@ export const Game = ()=>{
                 <span>(Tap to play again)</span>
             </p>
             <span ref={garra} id='garra'></span>
-            <img width='1589' height='1854' src='contact/contact-machine.webp' alt='Game machine' id='machine' />
+            <img width='1589' height='1854' src='/contact/contact-machine.webp' alt='Game machine' id='machine' />
             <div className="machine-btns">
                 <span onClick={handleMachine} ref={btnPush} id='machine-btn-push'></span>
                 <span onClick={moveLeft} ref={btnLeft} id='machine-btn-left'></span>

@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
-    background-image: url('contact/contact-flower.webp');
+    background-image: url('/contact/contact-flower.webp');
     background-size: cover;
     z-index: 4;
 }
@@ -67,10 +67,10 @@
     border-radius: 5px;
 }
 .subject-greetings{
-    background-image: url('contact/contact-greetings.webp');
+    background-image: url('/contact/contact-greetings.webp');
 }
 .subject-comission{
-    background-image: url('contact/contact-comission.webp');
+    background-image: url('/contact/contact-comission.webp');
 }
 .cuteContact-form-subject input {
     position: absolute;

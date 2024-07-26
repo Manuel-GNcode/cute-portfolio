@@ -1,9 +1,3 @@
-:root {
-    --widthM: 530px;
-    --heightM: 618px;
-    --scaleM: 0.85;
-}
-
 #cuteContact {
     width: 100%;
     height: 100%;
@@ -57,7 +51,7 @@
 .cuteContact-bottom {
     height: 20%;
     width: 100%;
-    background-image: url('works/works-tableFront.webp');
+    background-image: url('/works/works-tableFront.webp');
     background-size: cover;
     position: relative;
     z-index: 4;
