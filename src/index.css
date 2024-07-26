@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   font-size: 16px;
 }
-p, h1, h2, input, label, textarea, button {
+p, h1, h2, input, label, textarea, button, caption {
   font-family: 'playwrite', 'dosis', sans-serif;
 }
 label, body {
