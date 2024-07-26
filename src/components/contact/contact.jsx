@@ -22,7 +22,7 @@ export default function Contact({show, updateShow}) {
         <article ref={cuteContact} id="cuteContact">
             <p onClick={handleContact} className='cuteContact-workPage'><span className='homePage-arrow'></span>Works</p>
             {showCredits && 
-            <Suspense fallback={<h2>Loading...</h2>}>
+            <Suspense fallback={<h2 className='cuteContact-creditLoad'>Loading...</h2>}>
                 <Credits updateCredits={setShowCredits}/>
             </Suspense>}
             <section className="cuteContact-main">

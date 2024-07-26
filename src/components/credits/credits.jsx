@@ -12,7 +12,7 @@ const Credits = ({updateCredits})=>{
                 <section className='cuteCredits-section'>
                     <div className='cuteCredits-authors'>
                         <span className='cuteCredits-author'>
-                            <p>Design by:</p>
+                            <p>Designed by:</p>
                             <img width='376' height='163' src="contact/credits/credits-lau.webp" alt="Lau logo" />
                         </span>
                         <span className='cuteCredits-author'>
@@ -20,7 +20,7 @@ const Credits = ({updateCredits})=>{
                             <img width='476' height='69' src="contact/credits/credits-gncode.webp" alt="< GNcode /> logo" />
                         </span>
                     </div>
-                    <p>Illustration by a human.</p>
+                    <p>Illustrations made by a human.</p>
                     <p>Developed with React and JavaScript.</p>
                 </section>
 

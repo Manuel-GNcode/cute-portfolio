@@ -9,6 +9,16 @@
     background: linear-gradient(90deg, rgba(232,224,231,1) 0%, rgba(219,209,226,1) 90%);
 }
 
+.cuteContact-creditLoad {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: var(--rouse);
+    z-index: 200;
+}
+
 .cuteContact-workPage {
     position: absolute;
     top: 0;
